@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Description>Unified conditional validator designed for .NET built-in structures and types</Description>
+    <Company>Sachi-Home</Company>
+    <Authors>Sachintha Silva</Authors>
+    <Copyright>Sachintha-PC</Copyright>
+  </PropertyGroup>
+
+</Project>
