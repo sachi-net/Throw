@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using ThrowValidator.Extensions;
 
 namespace ThrowUnitTests
@@ -9,7 +10,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Decimal(2000);
+                String("Sachintha");
             }
             catch (ArgumentException exp)
             {
@@ -39,6 +40,7 @@ namespace ThrowUnitTests
             Console.Write($" {exp.Message}");
         }
 
+        #region Numeric types
         // Integrals
         static void Sbyte(sbyte age)
         {
@@ -284,7 +286,7 @@ namespace ThrowUnitTests
         {
             salary.Throw()
                 .WhenZero()
-                .WhenEqualTo(50000)
+                .WhenEqualTo(2500)
                 .When(() => salary / 25 < 40)
                 .WhenGreaterThanOrEqualTo(350000)
                 .WhenNegative()
@@ -298,12 +300,33 @@ namespace ThrowUnitTests
             salary.Throw()
                 .WhenZero()
                 .WhenNull()
-                .WhenEqualTo(50000)
+                .WhenEqualTo(2500)
                 .When(() => salary / 25 < 40)
                 .WhenGreaterThanOrEqualTo(350000)
                 .WhenInRange(2000, 3000, Boundary.LeftOnly);
 
             Show(string.Format("Salary is LKR {0}", salary));
         }
+        #endregion
+
+        #region String
+        static void String(string name)
+        {
+            name.Throw()
+                .WhenNull()
+                .WhenEmpty()
+                .WhenWhiteSpaces()
+                .When(() => name.Contains("ABC"))
+                .WhenNotMatchWith(new Regex(@"^[a-z]+$", RegexOptions.IgnoreCase))
+                .WhenNotContain("NTHA", StringComparison.OrdinalIgnoreCase)
+                .WhenStartWith("A")
+                .WhenNotStartWith("s", StringComparison.OrdinalIgnoreCase)
+                .WhenEndWith("Z")
+                .WhenNotEndWith("A", StringComparison.OrdinalIgnoreCase)
+                .WhenLengthEqualTo(20);
+
+            Show(string.Format("Name is {0}", name));
+        }
+        #endregion
     }
 }
