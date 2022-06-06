@@ -10,7 +10,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                DateTime_Null_Val(new(2022, 5, 20));
+                Bool_Null(null);
             }
             catch (ArgumentException exp)
             {
@@ -344,6 +344,7 @@ namespace ThrowUnitTests
         static void DateTime_Null_Val(DateTime? dateTime)
         {
             dateTime.Throw()
+                .When(() => 5 + 3 == -8)
                 .WhenOutOfRange(new(2022, 5, 10), new(2022, 5, 20), Boundary.LeftOnly)
                 .WhenEqualTo(new(1993, 11, 8))
                 .WhenNull()
@@ -351,6 +352,27 @@ namespace ThrowUnitTests
                 .WhenLessThanOrEqualTo(DateTime.Now.Date.AddYears(-5));
 
             Show(string.Format("DateTime is {0}", ((DateTime)dateTime).ToString("yyyy-MM-dd hh:mm:ss tt")));
+        }
+        #endregion
+
+        #region Boolean
+        static void Bool(bool value)
+        {
+            value.Throw()
+                .WhenFalse()
+                .When(() => 5 + 3 == -8);
+
+            Show(string.Format("Value is {0}", value));
+        }
+
+        static void Bool_Null(bool? value)
+        {
+            value.Throw()
+                .WhenNull()
+                .WhenTrue()
+                .When(() => 5 + 3 == -8);
+
+            Show(string.Format("Value is {0}", value));
         }
         #endregion
     }

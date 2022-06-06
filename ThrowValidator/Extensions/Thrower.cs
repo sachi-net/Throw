@@ -180,5 +180,19 @@ namespace ThrowValidator.Extensions
 
         public static IDateTimeValidatable Throw(this DateTime? value, Exception exception) => new DateTimeValidator(value, exception);
         #endregion
+
+        #region bool
+        public static IBooleanValidatable Throw(this bool value) => new BooleanValidator(value);
+
+        public static IBooleanValidatable Throw(this bool value, string message) => new BooleanValidator(value, message);
+
+        public static IBooleanValidatable Throw(this bool value, Exception exception) => new BooleanValidator(value, exception);
+
+        public static IBooleanValidatable Throw(this bool? value) => new BooleanValidator(value);
+
+        public static IBooleanValidatable Throw(this bool? value, string message) => new BooleanValidator(value, message);
+
+        public static IBooleanValidatable Throw(this bool? value, Exception exception) => new BooleanValidator(value, exception);
+        #endregion
     }
 }

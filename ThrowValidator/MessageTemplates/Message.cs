@@ -32,5 +32,8 @@
         internal const string STRING_NOT_STARTS_WITH = "Value does not start with '{0}'.";
         internal const string STRING_ENDS_WITH = "Value cannot end with '{0}'.";
         internal const string STRING_NOT_ENDS_WITH = "Value does not end with '{0}'.";
+
+        internal const string TRUE = "Value cannot be true.";
+        internal const string FALSE = "Value cannot be false.";
     }
 }
