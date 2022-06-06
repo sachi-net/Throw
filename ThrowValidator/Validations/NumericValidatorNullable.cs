@@ -75,6 +75,41 @@ namespace ThrowValidator.Validations
             return this;
         }
 
+        public INumericValidator<T> WhenInRange(T left, T right, Boundary boundary = Boundary.Inclusive, string message = null)
+        {
+            bool isInRange = false;
+
+            if (Nullable.Compare<T>(left, right) > 0)
+            {
+                T temp = left;
+                left = right;
+                right = temp;
+            }
+
+            switch (boundary)
+            {
+                case Boundary.Inclusive:
+                    isInRange = Nullable.Compare(value, left) >= 0 && Nullable.Compare(value, right) <= 0;
+                    break;
+                case Boundary.Exclusive:
+                    isInRange = Nullable.Compare(value, left) > 0 && Nullable.Compare(value, right) < 0;
+                    break;
+                case Boundary.LeftOnly:
+                    isInRange = Nullable.Compare(value, left) >= 0 && Nullable.Compare(value, right) < 0;
+                    break;
+                case Boundary.RightOnly:
+                    isInRange = Nullable.Compare(value, left) > 0 && Nullable.Compare(value, right) <= 0;
+                    break;
+            }
+            if (isInRange)
+            {
+                action?.Invoke();
+                _message = message ?? (_message is null ? string.Format(Message.IN_RANGE, $"({left}, {right})", boundary) : _message);
+                throw exception is not null ? exception : new RangeNotMatchException(_message);
+            }
+            return this;
+        }
+
         public INumericValidator<T> WhenLessThan(T value, string message = null)
         {
             if (Nullable.Compare(this.value, value) < 0)
@@ -127,6 +162,41 @@ namespace ThrowValidator.Validations
                 action?.Invoke();
                 _message = message ?? (_message is null ? Message.NULL : _message);
                 throw exception is not null ? exception : new ArgumentException(_message);
+            }
+            return this;
+        }
+
+        public INumericValidator<T> WhenOutOfRange(T left, T right, Boundary boundary = Boundary.Exclusive, string message = null)
+        {
+            bool isOutOfRange = false;
+
+            if (Nullable.Compare<T>(left, right) > 0)
+            {
+                T temp = left;
+                left = right;
+                right = temp;
+            }
+
+            switch (boundary)
+            {
+                case Boundary.Inclusive:
+                    isOutOfRange = Nullable.Compare(value, left) <= 0 || Nullable.Compare(value, right) >= 0;
+                    break;
+                case Boundary.Exclusive:
+                    isOutOfRange = Nullable.Compare(value, left) < 0 || Nullable.Compare(value, right) > 0;
+                    break;
+                case Boundary.LeftOnly:
+                    isOutOfRange = Nullable.Compare(value, left) <= 0 || Nullable.Compare(value, right) > 0;
+                    break;
+                case Boundary.RightOnly:
+                    isOutOfRange = Nullable.Compare(value, left) < 0 || Nullable.Compare(value, right) >= 0;
+                    break;
+            }
+            if (isOutOfRange)
+            {
+                action?.Invoke();
+                _message = message ?? (_message is null ? string.Format(Message.OUT_OF_RANGE, $"({left}, {right})", boundary) : _message);
+                throw exception is not null ? exception : new RangeNotMatchException(_message);
             }
             return this;
         }

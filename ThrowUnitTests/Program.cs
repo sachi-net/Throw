@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Decimal_Null(null);
+                Decimal(2000);
             }
             catch (ArgumentException exp)
             {
@@ -261,9 +261,9 @@ namespace ThrowUnitTests
         {
             salary.Throw()
                 .WhenZero()
-                .WhenEqualTo(50000)
+                .WhenEqualTo(2500)
                 .When(() => salary / 25 < 40)
-                .WhenGreaterThanOrEqualTo(350000);
+                .WhenOutOfRange(2000, 3000, Boundary.RightOnly);
 
             Show(string.Format("Salary is LKR {0}", salary));
         }
@@ -273,9 +273,9 @@ namespace ThrowUnitTests
             salary.Throw()
                 .WhenZero()
                 .WhenNull()
-                .WhenEqualTo(50000)
-                .When(() => salary / 25 < 40)
-                .WhenGreaterThanOrEqualTo(350000);
+                .WhenEqualTo(2500)
+                .WhenOutOfRange(2000, 3000, Boundary.RightOnly)
+                .When(() => salary / 25 < 40);
 
             Show(string.Format("Salary is LKR {0}", salary));
         }
@@ -287,7 +287,8 @@ namespace ThrowUnitTests
                 .WhenEqualTo(50000)
                 .When(() => salary / 25 < 40)
                 .WhenGreaterThanOrEqualTo(350000)
-                .WhenNegative();
+                .WhenNegative()
+                .WhenInRange(2000, 3000, Boundary.LeftOnly);
 
             Show(string.Format("Salary is LKR {0}", salary));
         }
@@ -299,7 +300,8 @@ namespace ThrowUnitTests
                 .WhenNull()
                 .WhenEqualTo(50000)
                 .When(() => salary / 25 < 40)
-                .WhenGreaterThanOrEqualTo(350000);
+                .WhenGreaterThanOrEqualTo(350000)
+                .WhenInRange(2000, 3000, Boundary.LeftOnly);
 
             Show(string.Format("Salary is LKR {0}", salary));
         }

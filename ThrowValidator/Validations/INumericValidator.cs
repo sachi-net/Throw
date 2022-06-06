@@ -19,5 +19,7 @@ namespace ThrowValidator.Validations
         public INumericValidator<T> WhenGreaterThanOrEqualTo(T value, string message = null);
         public INumericValidator<T> WhenEqualTo(T value, string message = null);
         public INumericValidator<T> WhenNotEqualTo(T value, string message = null);
+        public INumericValidator<T> WhenInRange(T left, T right, Boundary boundary = Boundary.Inclusive, string message = null);
+        public INumericValidator<T> WhenOutOfRange(T left, T right, Boundary boundary = Boundary.Exclusive, string message = null);
     }
 }
