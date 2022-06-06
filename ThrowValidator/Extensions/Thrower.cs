@@ -20,6 +20,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region byte
+        public static INumericValidator<byte> Throw(this byte value) => new NumericValidator<byte>(value);
+
+        public static INumericValidator<byte> Throw(this byte value, string message) => new NumericValidator<byte>(value, message);
+
+        public static INumericValidator<byte> Throw(this byte value, Exception exception) => new NumericValidator<byte>(value, exception);
+
+        public static INumericValidator<byte> Throw(this byte? value) => new NumericValidatorNullable<byte>(value);
+
+        public static INumericValidator<byte> Throw(this byte? value, string message) => new NumericValidatorNullable<byte>(value, message);
+
+        public static INumericValidator<byte> Throw(this byte? value, Exception exception) => new NumericValidatorNullable<byte>(value, exception);
         #endregion
 
         #region short

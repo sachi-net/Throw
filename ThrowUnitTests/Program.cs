@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Sbyte_Null(62);
+                Byte_Null(24);
             }
             catch (ArgumentException exp)
             {
@@ -46,6 +46,30 @@ namespace ThrowUnitTests
         }
 
         static void Sbyte_Null(sbyte? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Byte(byte age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Byte_Null(byte? age)
         {
             age.Throw()
                 .WhenZero()
