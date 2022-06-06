@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Double_Null(0);
+                Sbyte_Null(62);
             }
             catch (ArgumentException exp)
             {
@@ -31,6 +31,30 @@ namespace ThrowUnitTests
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine(message);
             Console.ResetColor();
+        }
+
+        static void Sbyte(sbyte age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Sbyte_Null(sbyte? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
         }
 
         static void Int(int age)

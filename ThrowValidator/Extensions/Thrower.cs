@@ -6,6 +6,17 @@ namespace ThrowValidator.Extensions
     public static class Thrower
     {
         #region sbyte
+        public static INumericValidator<sbyte> Throw(this sbyte value) => new NumericValidator<sbyte>(value);
+
+        public static INumericValidator<sbyte> Throw(this sbyte value, string message) => new NumericValidator<sbyte>(value, message);
+
+        public static INumericValidator<sbyte> Throw(this sbyte value, Exception exception) => new NumericValidator<sbyte>(value, exception);
+
+        public static INumericValidator<sbyte> Throw(this sbyte? value) => new NumericValidatorNullable<sbyte>(value);
+
+        public static INumericValidator<sbyte> Throw(this sbyte? value, string message) => new NumericValidatorNullable<sbyte>(value, message);
+
+        public static INumericValidator<sbyte> Throw(this sbyte? value, Exception exception) => new NumericValidatorNullable<sbyte>(value, exception);
         #endregion
 
         #region byte
