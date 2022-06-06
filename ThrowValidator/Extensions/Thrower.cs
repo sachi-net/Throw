@@ -117,13 +117,18 @@ namespace ThrowValidator.Extensions
         public static INumericValidator<ulong> Throw(this ulong? value, Exception exception) => new NumericValidatorNullable<ulong>(value, exception);
         #endregion
 
-        #region nint
-        #endregion
-
-        #region nuint
-        #endregion
-
         #region float
+        public static INumericValidator<float> Throw(this float value) => new NumericValidator<float>(value);
+
+        public static INumericValidator<float> Throw(this float value, string message) => new NumericValidator<float>(value, message);
+
+        public static INumericValidator<float> Throw(this float value, Exception exception) => new NumericValidator<float>(value, exception);
+
+        public static INumericValidator<float> Throw(this float? value) => new NumericValidatorNullable<float>(value);
+
+        public static INumericValidator<float> Throw(this float? value, string message) => new NumericValidatorNullable<float>(value, message);
+
+        public static INumericValidator<float> Throw(this float? value, Exception exception) => new NumericValidatorNullable<float>(value, exception);
         #endregion
 
         #region double

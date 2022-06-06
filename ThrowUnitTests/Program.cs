@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Ulong_Null(null);
+                Float_Null(null);
             }
             catch (ArgumentException exp)
             {
@@ -233,6 +233,29 @@ namespace ThrowUnitTests
         }
 
         // Floats
+        static void Float(float salary)
+        {
+            salary.Throw()
+                .WhenZero()
+                .WhenEqualTo(50000)
+                .When(() => salary / 25 < 40)
+                .WhenGreaterThanOrEqualTo(350000)
+                .WhenNegative();
+
+            Show(string.Format("Salary is LKR {0}", salary));
+        }
+
+        static void Float_Null(float? salary)
+        {
+            salary.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(50000)
+                .When(() => salary / 25 < 40)
+                .WhenGreaterThanOrEqualTo(350000);
+
+            Show(string.Format("Salary is LKR {0}", salary));
+        }
         static void Double(double salary)
         {
             salary.Throw()
