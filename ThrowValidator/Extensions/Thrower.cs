@@ -24,11 +24,11 @@ namespace ThrowValidator.Extensions
 
         public static INumericValidator<int> Throw(this int value, Exception exception) => new NumericValidator<int>(value, exception);
 
-        public static NumericValidatorNullable<int> Throw(this int? value) => new NumericValidatorNullable<int>(value);
+        public static INumericValidator<int> Throw(this int? value) => new NumericValidatorNullable<int>(value);
 
-        public static NumericValidatorNullable<int> Throw(this int? value, string message) => new NumericValidatorNullable<int>(value, message);
+        public static INumericValidator<int> Throw(this int? value, string message) => new NumericValidatorNullable<int>(value, message);
 
-        public static NumericValidatorNullable<int> Throw(this int? value, Exception exception) => new NumericValidatorNullable<int>(value, exception);
+        public static INumericValidator<int> Throw(this int? value, Exception exception) => new NumericValidatorNullable<int>(value, exception);
         #endregion
 
         #region uint
@@ -56,11 +56,11 @@ namespace ThrowValidator.Extensions
 
         public static INumericValidator<double> Throw(this double value, Exception exception) => new NumericValidator<double>(value, exception);
 
-        public static NumericValidatorNullable<double> Throw(this double? value) => new NumericValidatorNullable<double>(value);
+        public static INumericValidator<double> Throw(this double? value) => new NumericValidatorNullable<double>(value);
 
-        public static NumericValidatorNullable<double> Throw(this double? value, string message) => new NumericValidatorNullable<double>(value, message);
+        public static INumericValidator<double> Throw(this double? value, string message) => new NumericValidatorNullable<double>(value, message);
 
-        public static NumericValidatorNullable<double> Throw(this double? value, Exception exception) => new NumericValidatorNullable<double>(value, exception);
+        public static INumericValidator<double> Throw(this double? value, Exception exception) => new NumericValidatorNullable<double>(value, exception);
         #endregion
 
         #region decimal

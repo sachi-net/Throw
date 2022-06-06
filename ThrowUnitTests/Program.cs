@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Double_Null(null);
+                Double_Null(0);
             }
             catch (ArgumentException exp)
             {
