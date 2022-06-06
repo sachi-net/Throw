@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Float_Null(null);
+                Decimal_Null(null);
             }
             catch (ArgumentException exp)
             {
@@ -256,6 +256,7 @@ namespace ThrowUnitTests
 
             Show(string.Format("Salary is LKR {0}", salary));
         }
+
         static void Double(double salary)
         {
             salary.Throw()
@@ -268,6 +269,30 @@ namespace ThrowUnitTests
         }
 
         static void Double_Null(double? salary)
+        {
+            salary.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(50000)
+                .When(() => salary / 25 < 40)
+                .WhenGreaterThanOrEqualTo(350000);
+
+            Show(string.Format("Salary is LKR {0}", salary));
+        }
+
+        static void Decimal(decimal salary)
+        {
+            salary.Throw()
+                .WhenZero()
+                .WhenEqualTo(50000)
+                .When(() => salary / 25 < 40)
+                .WhenGreaterThanOrEqualTo(350000)
+                .WhenNegative();
+
+            Show(string.Format("Salary is LKR {0}", salary));
+        }
+
+        static void Decimal_Null(decimal? salary)
         {
             salary.Throw()
                 .WhenZero()

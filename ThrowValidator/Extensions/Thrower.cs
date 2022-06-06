@@ -146,6 +146,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region decimal
+        public static INumericValidator<decimal> Throw(this decimal value) => new NumericValidator<decimal>(value);
+
+        public static INumericValidator<decimal> Throw(this decimal value, string message) => new NumericValidator<decimal>(value, message);
+
+        public static INumericValidator<decimal> Throw(this decimal value, Exception exception) => new NumericValidator<decimal>(value, exception);
+
+        public static INumericValidator<decimal> Throw(this decimal? value) => new NumericValidatorNullable<decimal>(value);
+
+        public static INumericValidator<decimal> Throw(this decimal? value, string message) => new NumericValidatorNullable<decimal>(value, message);
+
+        public static INumericValidator<decimal> Throw(this decimal? value, Exception exception) => new NumericValidatorNullable<decimal>(value, exception);
         #endregion
     }
 }
