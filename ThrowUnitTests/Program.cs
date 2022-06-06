@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Long_Null(null);
+                Ulong_Null(null);
             }
             catch (ArgumentException exp)
             {
@@ -197,6 +197,30 @@ namespace ThrowUnitTests
         }
 
         static void Long_Null(long? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Ulong(ulong age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Ulong_Null(ulong? age)
         {
             age.Throw()
                 .WhenZero()
