@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Short_Nulll(null);
+                Ushort_Null(65);
             }
             catch (ArgumentException exp)
             {
@@ -17,8 +17,7 @@ namespace ThrowUnitTests
             }
             catch (Exception exp)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(exp.Message);
+                ShowException("[Exception]", exp);
             }
 
             Console.ReadKey();
@@ -101,6 +100,30 @@ namespace ThrowUnitTests
         }
 
         static void Short_Nulll(short? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Ushort(ushort age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Ushort_Null(ushort? age)
         {
             age.Throw()
                 .WhenZero()

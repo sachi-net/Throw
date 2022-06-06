@@ -48,6 +48,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region ushort
+        public static INumericValidator<ushort> Throw(this ushort value) => new NumericValidator<ushort>(value);
+
+        public static INumericValidator<ushort> Throw(this ushort value, string message) => new NumericValidator<ushort>(value, message);
+
+        public static INumericValidator<ushort> Throw(this ushort value, Exception exception) => new NumericValidator<ushort>(value, exception);
+
+        public static INumericValidator<ushort> Throw(this ushort? value) => new NumericValidatorNullable<ushort>(value);
+
+        public static INumericValidator<ushort> Throw(this ushort? value, string message) => new NumericValidatorNullable<ushort>(value, message);
+
+        public static INumericValidator<ushort> Throw(this ushort? value, Exception exception) => new NumericValidatorNullable<ushort>(value, exception);
         #endregion
 
         #region int
