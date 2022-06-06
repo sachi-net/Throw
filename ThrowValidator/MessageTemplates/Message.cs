@@ -35,5 +35,7 @@
 
         internal const string TRUE = "Value cannot be true.";
         internal const string FALSE = "Value cannot be false.";
+
+        internal const string ENUM_OUT_OF_RANGE = "Index '{0}' is not defined in '{1}' enumeration.";
     }
 }

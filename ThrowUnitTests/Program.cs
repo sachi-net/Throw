@@ -10,7 +10,10 @@ namespace ThrowUnitTests
         {
             try
             {
-                Bool_Null(null);
+                Enum a = Boundary.Inclusive;
+                Console.WriteLine(a.ToString() == Boundary.Inclusive.ToString());
+
+                Enums(Boundary.RightOnly);
             }
             catch (ArgumentException exp)
             {
@@ -373,6 +376,19 @@ namespace ThrowUnitTests
                 .When(() => 5 + 3 == -8);
 
             Show(string.Format("Value is {0}", value));
+        }
+        #endregion
+
+        #region Enum
+        static void Enums(Boundary? boundary)
+        {
+            boundary.Throw()
+                .WhenNull()
+                .When(() => 3 == 3 - 5)
+                .WhenOutOfRange(0)
+                .WhenEqualTo(Boundary.Exclusive);
+
+            Show(string.Format("Enum is {0}", boundary));
         }
         #endregion
     }

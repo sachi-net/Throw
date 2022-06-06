@@ -194,5 +194,13 @@ namespace ThrowValidator.Extensions
 
         public static IBooleanValidatable Throw(this bool? value, Exception exception) => new BooleanValidator(value, exception);
         #endregion
+
+        #region enum
+        public static IEnumValidatable Throw(this Enum value) => new EnumValidator(value);
+
+        public static IEnumValidatable Throw(this Enum value, string message) => new EnumValidator(value, message);
+
+        public static IEnumValidatable Throw(this Enum value, Exception exception) => new EnumValidator(value, exception);
+        #endregion
     }
 }
