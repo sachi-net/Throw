@@ -9,7 +9,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                Ushort_Null(65);
+                Uint_Null(null);
             }
             catch (ArgumentException exp)
             {
@@ -39,6 +39,7 @@ namespace ThrowUnitTests
             Console.Write($" {exp.Message}");
         }
 
+        // Integrals
         static void Sbyte(sbyte age)
         {
             age.Throw()
@@ -159,6 +160,31 @@ namespace ThrowUnitTests
             Show(string.Format("Age is {0}", age));
         }
 
+        static void Uint(uint age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Uint_Null(uint? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        // Floats
         static void Double(double salary)
         {
             salary.Throw()

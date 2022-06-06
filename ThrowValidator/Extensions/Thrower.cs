@@ -76,6 +76,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region uint
+        public static INumericValidator<uint> Throw(this uint value) => new NumericValidator<uint>(value);
+
+        public static INumericValidator<uint> Throw(this uint value, string message) => new NumericValidator<uint>(value, message);
+
+        public static INumericValidator<uint> Throw(this uint value, Exception exception) => new NumericValidator<uint>(value, exception);
+
+        public static INumericValidator<uint> Throw(this uint? value) => new NumericValidatorNullable<uint>(value);
+
+        public static INumericValidator<uint> Throw(this uint? value, string message) => new NumericValidatorNullable<uint>(value, message);
+
+        public static INumericValidator<uint> Throw(this uint? value, Exception exception) => new NumericValidatorNullable<uint>(value, exception);
         #endregion
 
         #region long
