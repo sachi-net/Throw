@@ -34,6 +34,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region short
+        public static INumericValidator<short> Throw(this short value) => new NumericValidator<short>(value);
+
+        public static INumericValidator<short> Throw(this short value, string message) => new NumericValidator<short>(value, message);
+
+        public static INumericValidator<short> Throw(this short value, Exception exception) => new NumericValidator<short>(value, exception);
+
+        public static INumericValidator<short> Throw(this short? value) => new NumericValidatorNullable<short>(value);
+
+        public static INumericValidator<short> Throw(this short? value, string message) => new NumericValidatorNullable<short>(value, message);
+
+        public static INumericValidator<short> Throw(this short? value, Exception exception) => new NumericValidatorNullable<short>(value, exception);
         #endregion
 
         #region ushort

@@ -9,13 +9,11 @@ namespace ThrowUnitTests
         {
             try
             {
-                Byte_Null(24);
+                Short_Nulll(null);
             }
             catch (ArgumentException exp)
             {
-                Console.ResetColor();
-                Console.BackgroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("CAUGHT BY [ArgumentException]: {0}", exp.Message);
+                ShowException("CAUGHT BY [ArgumentException]", exp);
             }
             catch (Exception exp)
             {
@@ -31,6 +29,15 @@ namespace ThrowUnitTests
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine(message);
             Console.ResetColor();
+        }
+
+        static void ShowException(string title, Exception exp)
+        {
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Write(title);
+            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write($" {exp.Message}");
         }
 
         static void Sbyte(sbyte age)
@@ -70,6 +77,30 @@ namespace ThrowUnitTests
         }
 
         static void Byte_Null(byte? age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenNull()
+                .WhenEqualTo(30)
+                .When(() => age / 10 > 5)
+                .WhenLessThan(24);
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Short(short age)
+        {
+            age.Throw()
+                .WhenZero()
+                .WhenEqualTo(30)
+                .WhenLessThan(15)
+                .WhenGreaterThan(80)
+                .WhenNegative();
+
+            Show(string.Format("Age is {0}", age));
+        }
+
+        static void Short_Nulll(short? age)
         {
             age.Throw()
                 .WhenZero()
