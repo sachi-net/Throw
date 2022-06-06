@@ -90,6 +90,17 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region long
+        public static INumericValidator<long> Throw(this long value) => new NumericValidator<long>(value);
+
+        public static INumericValidator<long> Throw(this long value, string message) => new NumericValidator<long>(value, message);
+
+        public static INumericValidator<long> Throw(this long value, Exception exception) => new NumericValidator<long>(value, exception);
+
+        public static INumericValidator<long> Throw(this long? value) => new NumericValidatorNullable<long>(value);
+
+        public static INumericValidator<long> Throw(this long? value, string message) => new NumericValidatorNullable<long>(value, message);
+
+        public static INumericValidator<long> Throw(this long? value, Exception exception) => new NumericValidatorNullable<long>(value, exception);
         #endregion
 
         #region ulong
