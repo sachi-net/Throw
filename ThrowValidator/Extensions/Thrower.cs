@@ -166,5 +166,19 @@ namespace ThrowValidator.Extensions
 
         public static IStringValidatable Throw(this string value, Exception exception) => new StringValidator(value, exception);
         #endregion
+
+        #region DateTime
+        public static IDateTimeValidatable Throw(this DateTime value) => new DateTimeValidator(value);
+
+        public static IDateTimeValidatable Throw(this DateTime value, string message) => new DateTimeValidator(value, message);
+
+        public static IDateTimeValidatable Throw(this DateTime value, Exception exception) => new DateTimeValidator(value, exception);
+
+        public static IDateTimeValidatable Throw(this DateTime? value) => new DateTimeValidator(value);
+
+        public static IDateTimeValidatable Throw(this DateTime? value, string message) => new DateTimeValidator(value, message);
+
+        public static IDateTimeValidatable Throw(this DateTime? value, Exception exception) => new DateTimeValidator(value, exception);
+        #endregion
     }
 }

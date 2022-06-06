@@ -50,7 +50,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_CONTAINS, character) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -61,7 +61,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_CONTAINS, value) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -72,7 +72,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_CONTAINS, character) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -83,7 +83,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_CONTAINS, value) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -227,7 +227,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_NOT_CONTAINS, character) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -238,7 +238,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_NOT_CONTAINS, value) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -249,7 +249,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_NOT_CONTAINS, character) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }
@@ -260,7 +260,7 @@ namespace ThrowValidator.Validations
             {
                 action?.Invoke();
                 _message = message ?? (_message is null ? string.Format(Message.STRING_NOT_CONTAINS, value) : _message);
-                throw exception is not null ? exception : new ConditionNotMeetException(_message);
+                throw exception is not null ? exception : new ArgumentException(_message);
             }
             return this;
         }

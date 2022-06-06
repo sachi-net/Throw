@@ -10,7 +10,7 @@ namespace ThrowUnitTests
         {
             try
             {
-                String("Sachintha");
+                DateTime_Null_Val(new(2022, 5, 20));
             }
             catch (ArgumentException exp)
             {
@@ -326,6 +326,31 @@ namespace ThrowUnitTests
                 .WhenLengthEqualTo(20);
 
             Show(string.Format("Name is {0}", name));
+        }
+        #endregion
+
+        #region DateTime
+        static void DateTimeVal(DateTime dateTime)
+        {
+            dateTime.Throw()
+                .WhenInRange(new(2022, 1, 1), new(2022, 12, 31), Boundary.Inclusive)
+                .WhenEqualTo(new(1993, 11, 8))
+                .WhenGreaterThanOrEqualTo(DateTime.Now.Date.AddYears(5))
+                .WhenLessThanOrEqualTo(DateTime.Now.Date.AddYears(-5));
+
+            Show(string.Format("DateTime is {0}", dateTime.ToString("yyyy-MM-dd hh:mm:ss tt")));
+        }
+
+        static void DateTime_Null_Val(DateTime? dateTime)
+        {
+            dateTime.Throw()
+                .WhenOutOfRange(new(2022, 5, 10), new(2022, 5, 20), Boundary.LeftOnly)
+                .WhenEqualTo(new(1993, 11, 8))
+                .WhenNull()
+                .WhenGreaterThanOrEqualTo(DateTime.Now.Date.AddYears(5))
+                .WhenLessThanOrEqualTo(DateTime.Now.Date.AddYears(-5));
+
+            Show(string.Format("DateTime is {0}", ((DateTime)dateTime).ToString("yyyy-MM-dd hh:mm:ss tt")));
         }
         #endregion
     }
