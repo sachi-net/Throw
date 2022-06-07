@@ -37,5 +37,8 @@
         internal const string FALSE = "Value cannot be false.";
 
         internal const string ENUM_OUT_OF_RANGE = "Index '{0}' is not defined in '{1}' enumeration.";
+
+        internal const string PREDICATE_MEET = "The condition does not meet by satisfying the rule.";
+        internal const string PREDICATE_NOT_MEET = "The condition does not meet by not satisfying the rule.";
     }
 }

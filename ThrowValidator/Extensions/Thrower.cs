@@ -202,5 +202,13 @@ namespace ThrowValidator.Extensions
 
         public static IEnumValidatable Throw(this Enum value, Exception exception) => new EnumValidator(value, exception);
         #endregion
+
+        #region custom-objects
+        public static ICustomType<T> Throw<T>(this T value) where T : class => new CustomValidator<T>(value);
+
+        public static ICustomType<T> Throw<T>(this T value, string message) where T : class => new CustomValidator<T>(value, message);
+
+        public static ICustomType<T> Throw<T>(this T value, Exception exception) where T : class => new CustomValidator<T>(value, exception);
+        #endregion
     }
 }

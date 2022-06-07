@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using ThrowValidator.Exceptions;
 using ThrowValidator.Extensions;
 
 namespace ThrowUnitTests
@@ -10,14 +11,21 @@ namespace ThrowUnitTests
         {
             try
             {
-                Enum a = Boundary.Inclusive;
-                Console.WriteLine(a.ToString() == Boundary.Inclusive.ToString());
-
-                Enums(Boundary.RightOnly);
+                Person person = new Person { Name = "Sachintha", Address = "Aluthgama", 
+                    Age = 40, IsMarried = false };
+                Custom(person);
             }
             catch (ArgumentException exp)
             {
                 ShowException("CAUGHT BY [ArgumentException]", exp);
+            }
+            catch (OverflowException exp)
+            {
+                ShowException("CAUGHT BY [OverflowException]", exp);
+            }
+            catch (ConditionNotMeetException exp)
+            {
+                ShowException("CAUGHT BY [ConditionNotMeetException]", exp);
             }
             catch (Exception exp)
             {
@@ -389,6 +397,19 @@ namespace ThrowUnitTests
                 .WhenEqualTo(Boundary.Exclusive);
 
             Show(string.Format("Enum is {0}", boundary));
+        }
+        #endregion
+
+        #region Custom
+        static void Custom(Person person)
+        {
+            person.Throw()
+                .WhenNull()
+                .When(p => !p.IsMarried && p.Age > 35, "Come-on man... you still haven't married.")
+                .WhenNot(p => p.Age >= 13, "This is for teenagers only.");
+
+            Show(string.Format("{0} from {1} is {2} years old.", 
+                person.Name, person.Address, person.Age));
         }
         #endregion
     }
