@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using ThrowValidator.Exceptions;
 using ThrowValidator.Extensions;
@@ -11,9 +12,20 @@ namespace ThrowUnitTests
         {
             try
             {
-                Person person = new Person { Name = "Sachintha", Address = "Aluthgama", 
-                    Age = 40, IsMarried = false };
-                Custom(person);
+                List<Person> people = new List<Person>
+                {
+                    new Person { Name = "Sachintha", Address = "Aluthgama", Age = 28, IsMarried = false },
+                    new Person { Name = "Thisaru", Address = "Aluthgama", Age = 24, IsMarried = false },
+                    new Person { Name = "Sanoj", Address = "Kalutara", Age = 30, IsMarried = true },
+                    new Person { Name = "Rabidu", Address = "Galle", Age = 32, IsMarried = true },
+                    new Person { Name = "Ravindu", Address = "Aluthgama", Age = 27, IsMarried = false },
+                    new Person { Name = "Subodha", Address = "Pannipitiya", Age = 27, IsMarried = true },
+                    new Person { Name = "Ravinga", Address = "Panadura", Age = 22, IsMarried = false },
+                    new Person { Name = "Gayani", Address = "Ambalangoda", Age = 27, IsMarried = true },
+                    new Person { Name = "Piyumi", Address = "Weligama", Age = 29, IsMarried = false }
+                };
+                
+                Collection(people);
             }
             catch (ArgumentException exp)
             {
@@ -410,6 +422,21 @@ namespace ThrowUnitTests
 
             Show(string.Format("{0} from {1} is {2} years old.", 
                 person.Name, person.Address, person.Age));
+        }
+        #endregion
+
+        #region Collections
+        static void Collection(ICollection<Person> list)
+        {
+            var me = new Person { Name = "Sachintha", Address = "Aluthgama", Age = 28, IsMarried = false };
+
+            list.Throw()
+                .WhenNull()
+                .WhenEmpty()
+                .WhenAny(p => p.Age >= 28 && !p.IsMarried)
+                .WhenNotContain(me);
+
+            Show(string.Format("List item count is {0}.", list.Count));
         }
         #endregion
     }

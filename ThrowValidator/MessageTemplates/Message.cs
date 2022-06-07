@@ -5,10 +5,10 @@
         internal const string NULL = "Value cannot be null.";
         internal const string EQUALS = "Value cannot equal to '{0}'.";
         internal const string NOT_EQUALS = "Value is not equal to '{0}'.";
-        internal const string GREATER = "Value cannot be greater than '{0}'.";
-        internal const string GREATER_EQ = "Value cannot be greater than or equal to '{0}'.";
-        internal const string LESSER = "Value cannot be less than '{0}'.";
-        internal const string LESSER_EQ = "Value cannot be less than or equal to '{0}'.";
+        internal const string GREATER = "Value cannot greater than '{0}'.";
+        internal const string GREATER_EQ = "Value cannot greater than or equal to '{0}'.";
+        internal const string LESSER = "Value cannot less than '{0}'.";
+        internal const string LESSER_EQ = "Value cannot less than or equal to '{0}'.";
         internal const string POSITIVE = "Value cannot be positive.";
         internal const string NEGATIVE = "Value cannot be negative.";
         internal const string ZERO = "Value cannot be zero.";
@@ -40,5 +40,19 @@
 
         internal const string PREDICATE_MEET = "The condition does not meet by satisfying the rule.";
         internal const string PREDICATE_NOT_MEET = "The condition does not meet by not satisfying the rule.";
+
+        internal const string LIST_CONTAIN = "Collection cannot contain the value.";
+        internal const string LIST_NOT_CONTAIN = "Value not found in the collection.";
+        internal const string LIST_COUNT_EQUALS = "Collection element count cannot equal to '{0}'.";
+        internal const string LIST_COUNT_NOT_EQUALS = "Collection element count does not equal to '{0}'.";
+        internal const string LIST_COUNT_LESSER = "Collection element count cannot less than '{0}'.";
+        internal const string LIST_COUNT_LESSER_EQ = "Collection element count cannot less than or equal to '{0}'.";
+        internal const string LIST_COUNT_GREATER = "Collection element count cannot greater than '{0}'.";
+        internal const string LIST_COUNT_GREATER_EQ = "Collection element count cannot greater than or equal to '{0}'.";
+        internal const string LIST_EMPTY = "Collection cannot be empty.";
+        internal const string LIST_NOT_EMPTY = "Collection is not empty.";
+        internal const string LIST_NULL = "Collection cannot be null.";
+        internal const string LIST_ANY = "Collection cannot contain any element which satisfies the rule.";
+
     }
 }

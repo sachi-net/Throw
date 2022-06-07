@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using ThrowValidator.Validations;
 
 namespace ThrowValidator.Extensions
@@ -209,6 +211,14 @@ namespace ThrowValidator.Extensions
         public static ICustomTypeValidatable<T> Throw<T>(this T value, string message) where T : class => new CustomValidator<T>(value, message);
 
         public static ICustomTypeValidatable<T> Throw<T>(this T value, Exception exception) where T : class => new CustomValidator<T>(value, exception);
+        #endregion
+
+        #region collections
+        public static ICollectionValidatable<T> Throw<T>(this ICollection<T> collection) => new CollectionValidator<T>(collection);
+
+        public static ICollectionValidatable<T> Throw<T>(this ICollection<T> collection, string message) => new CollectionValidator<T>(collection, message);
+
+        public static ICollectionValidatable<T> Throw<T>(this ICollection<T> collection, Exception exception) => new CollectionValidator<T>(collection, exception);
         #endregion
     }
 }
