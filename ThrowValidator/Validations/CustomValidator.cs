@@ -8,7 +8,7 @@ using ThrowValidator.MessageTemplates;
 
 namespace ThrowValidator.Validations
 {
-    public class CustomValidator<T> : ValidationBase, ICustomType<T>
+    public class CustomValidator<T> : ValidationBase, ICustomTypeValidatable<T>
     {
         internal T value;
 
@@ -32,7 +32,7 @@ namespace ThrowValidator.Validations
             this.action = action;
         }
 
-        public ICustomType<T> When(Func<bool> condition, string message = null)
+        public ICustomTypeValidatable<T> When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
             {
@@ -43,7 +43,7 @@ namespace ThrowValidator.Validations
             return this;
         }
 
-        public ICustomType<T> When(Func<T, bool> predicate, string message = null)
+        public ICustomTypeValidatable<T> When(Func<T, bool> predicate, string message = null)
         {
             if (predicate.Invoke(value))
             {
@@ -54,7 +54,7 @@ namespace ThrowValidator.Validations
             return this;
         }
 
-        public ICustomType<T> WhenNot(Func<T, bool> predicate, string message = null)
+        public ICustomTypeValidatable<T> WhenNot(Func<T, bool> predicate, string message = null)
         {
             if (!predicate.Invoke(value))
             {
@@ -65,7 +65,7 @@ namespace ThrowValidator.Validations
             return this;
         }
 
-        public ICustomType<T> WhenNull(string message = null)
+        public ICustomTypeValidatable<T> WhenNull(string message = null)
         {
             if (value is null)
             {

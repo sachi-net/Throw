@@ -204,11 +204,11 @@ namespace ThrowValidator.Extensions
         #endregion
 
         #region custom-objects
-        public static ICustomType<T> Throw<T>(this T value) where T : class => new CustomValidator<T>(value);
+        public static ICustomTypeValidatable<T> Throw<T>(this T value) where T : class => new CustomValidator<T>(value);
 
-        public static ICustomType<T> Throw<T>(this T value, string message) where T : class => new CustomValidator<T>(value, message);
+        public static ICustomTypeValidatable<T> Throw<T>(this T value, string message) where T : class => new CustomValidator<T>(value, message);
 
-        public static ICustomType<T> Throw<T>(this T value, Exception exception) where T : class => new CustomValidator<T>(value, exception);
+        public static ICustomTypeValidatable<T> Throw<T>(this T value, Exception exception) where T : class => new CustomValidator<T>(value, exception);
         #endregion
     }
 }
