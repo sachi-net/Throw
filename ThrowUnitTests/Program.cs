@@ -25,7 +25,7 @@ namespace ThrowUnitTests
                     new Person { Name = "Piyumi", Address = "Weligama", Age = 29, IsMarried = false }
                 };
 
-                TypeVal(people[0].Address.GetType());
+                TypeVal(people[0].Name.GetType());
             }
             catch (ArgumentException exp)
             {
@@ -54,6 +54,12 @@ namespace ThrowUnitTests
             Console.ResetColor();
         }
 
+        static void Write(string text, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.Write(text);
+        }
+
         static void ShowException(string title, Exception exp)
         {
             Console.ResetColor();
@@ -63,11 +69,22 @@ namespace ThrowUnitTests
             Console.Write($" {exp.Message}");
         }
 
+        static void Rainbow()
+        {
+            Write("|||||", ConsoleColor.DarkRed);
+            Write("|||||", ConsoleColor.Red);
+            Write("|||||", ConsoleColor.Yellow);
+            Write("|||||", ConsoleColor.Green);
+            Write("|||||", ConsoleColor.Blue);
+            Write("|||||", ConsoleColor.DarkBlue);
+            Write("|||||", ConsoleColor.Magenta);
+        }
+
         #region Numeric types
         // Integrals
         static void Sbyte(sbyte age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -79,7 +96,7 @@ namespace ThrowUnitTests
 
         static void Sbyte_Null(sbyte? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -91,7 +108,7 @@ namespace ThrowUnitTests
 
         static void Byte(byte age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -103,7 +120,7 @@ namespace ThrowUnitTests
 
         static void Byte_Null(byte? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -115,7 +132,7 @@ namespace ThrowUnitTests
 
         static void Short(short age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -127,7 +144,7 @@ namespace ThrowUnitTests
 
         static void Short_Nulll(short? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -139,7 +156,7 @@ namespace ThrowUnitTests
 
         static void Ushort(ushort age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -151,7 +168,7 @@ namespace ThrowUnitTests
 
         static void Ushort_Null(ushort? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -163,7 +180,7 @@ namespace ThrowUnitTests
 
         static void Int(int age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -175,7 +192,7 @@ namespace ThrowUnitTests
 
         static void Int_Null(int? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -187,7 +204,7 @@ namespace ThrowUnitTests
 
         static void Uint(uint age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -199,7 +216,7 @@ namespace ThrowUnitTests
 
         static void Uint_Null(uint? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -211,7 +228,7 @@ namespace ThrowUnitTests
 
         static void Long(long age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -223,7 +240,7 @@ namespace ThrowUnitTests
 
         static void Long_Null(long? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -235,7 +252,7 @@ namespace ThrowUnitTests
 
         static void Ulong(ulong age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(30)
                 .WhenLessThan(15)
@@ -247,7 +264,7 @@ namespace ThrowUnitTests
 
         static void Ulong_Null(ulong? age)
         {
-            age.Throw()
+            age.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(30)
@@ -260,7 +277,7 @@ namespace ThrowUnitTests
         // Floats
         static void Float(float salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(50000)
                 .When(() => salary / 25 < 40)
@@ -272,7 +289,7 @@ namespace ThrowUnitTests
 
         static void Float_Null(float? salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(50000)
@@ -284,7 +301,7 @@ namespace ThrowUnitTests
 
         static void Double(double salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(2500)
                 .When(() => salary / 25 < 40)
@@ -295,7 +312,7 @@ namespace ThrowUnitTests
 
         static void Double_Null(double? salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(2500)
@@ -307,7 +324,7 @@ namespace ThrowUnitTests
 
         static void Decimal(decimal salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenEqualTo(2500)
                 .When(() => salary / 25 < 40)
@@ -320,7 +337,7 @@ namespace ThrowUnitTests
 
         static void Decimal_Null(decimal? salary)
         {
-            salary.Throw()
+            salary.Run(Rainbow)
                 .WhenZero()
                 .WhenNull()
                 .WhenEqualTo(2500)
@@ -335,7 +352,7 @@ namespace ThrowUnitTests
         #region String
         static void String(string name)
         {
-            name.Throw()
+            name.Run(Rainbow)
                 .WhenNull()
                 .WhenEmpty()
                 .WhenWhiteSpaces()
@@ -355,7 +372,7 @@ namespace ThrowUnitTests
         #region DateTime
         static void DateTimeVal(DateTime dateTime)
         {
-            dateTime.Throw()
+            dateTime.Run(Rainbow)
                 .WhenInRange(new(2022, 1, 1), new(2022, 12, 31), Boundary.Inclusive)
                 .WhenEqualTo(new(1993, 11, 8))
                 .WhenGreaterThanOrEqualTo(DateTime.Now.Date.AddYears(5))
@@ -366,7 +383,7 @@ namespace ThrowUnitTests
 
         static void DateTime_Null_Val(DateTime? dateTime)
         {
-            dateTime.Throw()
+            dateTime.Run(Rainbow)
                 .When(() => 5 + 3 == -8)
                 .WhenOutOfRange(new(2022, 5, 10), new(2022, 5, 20), Boundary.LeftOnly)
                 .WhenEqualTo(new(1993, 11, 8))
@@ -381,7 +398,7 @@ namespace ThrowUnitTests
         #region Boolean
         static void Bool(bool value)
         {
-            value.Throw()
+            value.Run(Rainbow)
                 .WhenFalse()
                 .When(() => 5 + 3 == -8);
 
@@ -390,7 +407,7 @@ namespace ThrowUnitTests
 
         static void Bool_Null(bool? value)
         {
-            value.Throw()
+            value.Run(Rainbow)
                 .WhenNull()
                 .WhenTrue()
                 .When(() => 5 + 3 == -8);
@@ -402,7 +419,7 @@ namespace ThrowUnitTests
         #region Enum
         static void Enums(Boundary? boundary)
         {
-            boundary.Throw()
+            boundary.Run(Rainbow)
                 .WhenNull()
                 .When(() => 3 == 3 - 5)
                 .WhenOutOfRange(0)
@@ -415,7 +432,7 @@ namespace ThrowUnitTests
         #region Custom
         static void Custom(Person person)
         {
-            person.Throw()
+            person.Run(Rainbow)
                 .WhenNull()
                 .When(p => !p.IsMarried && p.Age > 35, "Come-on man... you still haven't married.")
                 .WhenNot(p => p.Age >= 13, "This is for teenagers only.");
@@ -430,7 +447,7 @@ namespace ThrowUnitTests
         {
             var me = new Person { Name = "Sachintha", Address = "Aluthgama", Age = 28, IsMarried = false };
 
-            list.Throw()
+            list.Run(Rainbow)
                 .WhenNull()
                 .WhenEmpty()
                 .WhenAny(p => p.Age >= 28 && !p.IsMarried)
@@ -443,7 +460,7 @@ namespace ThrowUnitTests
         #region Type
         static void TypeVal(Type type)
         {
-            type.Throw()
+            type.Run(Rainbow)
                 .WhenNull()
                 .WhenEqualTo(typeof(string));
 
