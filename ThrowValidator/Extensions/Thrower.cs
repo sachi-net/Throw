@@ -220,5 +220,13 @@ namespace ThrowValidator.Extensions
 
         public static ICollectionValidatable<T> Throw<T>(this ICollection<T> collection, Exception exception) => new CollectionValidator<T>(collection, exception);
         #endregion
+
+        #region Type
+        public static ITypeValidatable Throw(this Type type) => new TypeValidator(type);
+
+        public static ITypeValidatable Throw(this Type type, string message) => new TypeValidator(type, message);
+
+        public static ITypeValidatable Throw(this Type type, Exception exception) => new TypeValidator(type, exception);
+        #endregion
     }
 }

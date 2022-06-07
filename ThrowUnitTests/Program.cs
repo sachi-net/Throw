@@ -24,8 +24,8 @@ namespace ThrowUnitTests
                     new Person { Name = "Gayani", Address = "Ambalangoda", Age = 27, IsMarried = true },
                     new Person { Name = "Piyumi", Address = "Weligama", Age = 29, IsMarried = false }
                 };
-                
-                Collection(people);
+
+                TypeVal(people[0].Address.GetType());
             }
             catch (ArgumentException exp)
             {
@@ -437,6 +437,17 @@ namespace ThrowUnitTests
                 .WhenNotContain(me);
 
             Show(string.Format("List item count is {0}.", list.Count));
+        }
+        #endregion
+
+        #region Type
+        static void TypeVal(Type type)
+        {
+            type.Throw()
+                .WhenNull()
+                .WhenEqualTo(typeof(string));
+
+            Show(string.Format("Type is {0}.", type.FullName));
         }
         #endregion
     }

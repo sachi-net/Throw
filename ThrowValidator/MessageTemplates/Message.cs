@@ -54,5 +54,8 @@
         internal const string LIST_NULL = "Collection cannot be null.";
         internal const string LIST_ANY = "Collection cannot contain any element which satisfies the rule.";
 
+        internal const string TYPE_NULL = "Type cannot be null.";
+        internal const string TYPE_EQUALS = "Type cannot equal to '{0}'.";
+        internal const string TYPE_NOT_EQUALS = "Type is not equal to '{0}'.";
     }
 }
