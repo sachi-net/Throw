@@ -1024,29 +1024,162 @@
             Triggers when the given <paramref name="condition"/> evaluated to be true.
             </summary>
             <param name="condition">Boolean predicate condition.</param>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenFalse(System.String)">
             <summary>
             Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is false.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenNull(System.String)">
             <summary>
-            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is null.
+            Triggers when the <see cref="T:System.Boolean"/> (nullable) expression or value is null.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenTrue(System.String)">
             <summary>
             Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is true.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.CollectionValidator`1">
+            <summary>
+            Define validations for <see cref="T:System.Collections.Generic.ICollection`1"/> collections.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.#ctor(System.Collections.Generic.ICollection{`0})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.CollectionValidator`1"/> instance with <see cref="T:System.Collections.Generic.ICollection`1"/> list to perform validations.
+            </summary>
+            <param name="collection">Collection to be compared.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.#ctor(System.Collections.Generic.ICollection{`0},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.CollectionValidator`1"/> instance with <see cref="T:System.Collections.Generic.ICollection`1"/> list to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="collection">Collection to be compared.</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.#ctor(System.Collections.Generic.ICollection{`0},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.CollectionValidator`1"/> instance with <see cref="T:System.Collections.Generic.ICollection`1"/> list to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="collection">Collection to be compared.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.#ctor(System.Collections.Generic.ICollection{`0},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.CollectionValidator`1"/> instance with <see cref="T:System.Collections.Generic.ICollection`1"/> list and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="collection">Collection to be compared.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenAny(System.Func{`0,System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="predicate"/> evaluated to be true against each element in the collection.
+            </summary>
+            <param name="predicate"></param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenContain(`0,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> contains the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be checked in the list.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountGreaterThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is greater than the given <paramref name="maximum"/> value.
+            </summary>
+            <param name="maximum">Maximum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountGreaterThanOrEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is greater than or equal to the given <paramref name="maximum"/> value.
+            </summary>
+            <param name="maximum">Maximum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountLessThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is less than the given <paramref name="minimum"/> value.
+            </summary>
+            <param name="minimum">Minimum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountLessThanOrEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is less than or equal to the given <paramref name="minimum"/> value.
+            </summary>
+            <param name="minimum">Minimum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountNotEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list has no elements.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNotContain(`0,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> does not contain the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be checked in the list.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNotEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list has at least one element.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNull(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
         </member>
         <member name="T:ThrowValidator.Validations.IBooleanValidatable">
             <summary>
@@ -1058,29 +1191,136 @@
             Triggers when the given <paramref name="condition"/> evaluated to be true.
             </summary>
             <param name="condition">Boolean predicate condition.</param>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenNull(System.String)">
             <summary>
-            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is null.
+            Triggers when the <see cref="T:System.Boolean"/> (nullable) expression or value is null.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenTrue(System.String)">
             <summary>
             Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is true.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
         </member>
         <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenFalse(System.String)">
             <summary>
             Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is false.
             </summary>
-            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.ICollectionValidatable`1">
+            <summary>
+            Define methods to validate collections which implements <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <typeparam name="T">Type of class or struct.</typeparam>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenAny(System.Func{`0,System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="predicate"/> evaluated to be true against each element in the collection.
+            </summary>
+            <param name="predicate"></param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenNull(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list has no elements.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenNotEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> list has at least one element.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountNotEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountLessThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is less than the given <paramref name="minimum"/> value.
+            </summary>
+            <param name="minimum">Minimum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountLessThanOrEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is less than or equal to the given <paramref name="minimum"/> value.
+            </summary>
+            <param name="minimum">Minimum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountGreaterThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is greater than the given <paramref name="maximum"/> value.
+            </summary>
+            <param name="maximum">Maximum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenCountGreaterThanOrEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the number of elements in the <see cref="T:System.Collections.Generic.ICollection`1"/> is greater than or equal to the given <paramref name="maximum"/> value.
+            </summary>
+            <param name="maximum">Maximum value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenContain(`0,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> contains the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be checked in the list.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ICollectionValidatable`1.WhenNotContain(`0,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Collections.Generic.ICollection`1"/> does not contain the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be checked in the list.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
         </member>
     </members>
 </doc>

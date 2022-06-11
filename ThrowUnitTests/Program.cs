@@ -46,7 +46,7 @@ namespace ThrowUnitTests
 
             Console.ReadKey();
 
-            bool x = true;
+            ICollection<string> x = null;
             x.Throw();
         }
 
