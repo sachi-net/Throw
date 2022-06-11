@@ -46,7 +46,7 @@ namespace ThrowUnitTests
 
             Console.ReadKey();
 
-            ICollection<string> x = null;
+            Person x = null;
             x.Throw();
         }
 
