@@ -46,7 +46,7 @@ namespace ThrowUnitTests
 
             Console.ReadKey();
 
-            DateTime? x = null;
+            Boundary? x = null;
             x.Throw();
         }
 
