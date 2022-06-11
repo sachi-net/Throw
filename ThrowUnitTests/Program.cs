@@ -46,7 +46,7 @@ namespace ThrowUnitTests
 
             Console.ReadKey();
 
-            Person x = null;
+            DateTime? x = null;
             x.Throw();
         }
 

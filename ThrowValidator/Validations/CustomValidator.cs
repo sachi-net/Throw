@@ -9,7 +9,7 @@ using ThrowValidator.MessageTemplates;
 namespace ThrowValidator.Validations
 {
     /// <summary>
-    /// Define methods to validate in-built or custom classes.
+    /// Define validations in-built or custom classes.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class CustomValidator<T> : ValidationBase, ICustomTypeValidatable<T>
