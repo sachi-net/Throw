@@ -1725,5 +1725,389 @@
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
         </member>
+        <member name="T:ThrowValidator.Validations.INumericValidatable`1">
+            <summary>
+            Define methods to validate numeric structures.
+            </summary>
+            <typeparam name="T">Numeric struct.</typeparam>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenZero(System.String)">
+            <summary>
+            Triggers when the value is equal to zero.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenPositive(System.String)">
+            <summary>
+            Triggers when the value is greater than zero (positive).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenNegative(System.String)">
+            <summary>
+            Triggers when the value is less than zero (negative).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenLessThan(`0,System.String)">
+            <summary>
+            Triggers when the value is less than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenLessThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is less than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenGreaterThan(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenGreaterThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenNotEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenInRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is within the given range between <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.INumericValidatable`1.WhenOutOfRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is out of given range of <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.NumericValidator`1">
+            <summary>
+             Define validations for numeric structs.
+            </summary>
+            <typeparam name="T">Numeric struct.</typeparam>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.#ctor(`0)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidator`1"/> instance with value of type T to perform validations.
+            </summary>
+            <param name="value">Numeric value of type T.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.#ctor(`0,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidator`1"/> instance with value of type T to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="value">Numeric value of type T.</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.#ctor(`0,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidator`1"/> instance with value of type T to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="value">Numeric value of type T.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.#ctor(`0,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidator`1"/> instance with value of type T and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="value">Numeric value of type T.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenGreaterThan(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenGreaterThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenInRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is within the given range between <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenLessThan(`0,System.String)">
+            <summary>
+            Triggers when the value is less than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenLessThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is less than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNegative(System.String)">
+            <summary>
+            Triggers when the value is less than zero (negative).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNotEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenOutOfRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is out of given range of <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenPositive(System.String)">
+            <summary>
+            Triggers when the value is greater than zero (positive).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenZero(System.String)">
+            <summary>
+            Triggers when the value is equal to zero.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.NumericValidatorNullable`1">
+            <summary>
+             Define validations for nullable numeric structs.
+            </summary>
+            <typeparam name="T">Numeric struct.</typeparam>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.#ctor(System.Nullable{`0})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidatorNullable`1"/> instance with value of type T (nullable) to perform validations.
+            </summary>
+            <param name="value">Numeric value of type T (nullable).</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.#ctor(System.Nullable{`0},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidatorNullable`1"/> instance with value of type T (nullable) to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="value">Numeric value of type T (nullable).</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.#ctor(System.Nullable{`0},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidatorNullable`1"/> instance with value of type T (nullable) to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="value">Numeric value of type T (nullable).</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.#ctor(System.Nullable{`0},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.NumericValidatorNullable`1"/> instance with value of type T (nullable) and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="value">Numeric value of type T (nullable).</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenGreaterThan(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenGreaterThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is greater than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenInRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is within the given range between <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenLessThan(`0,System.String)">
+            <summary>
+            Triggers when the value is less than the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenLessThanOrEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is less than or equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNegative(System.String)">
+            <summary>
+            Triggers when the value is less than zero (negative).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNotEqualTo(`0,System.String)">
+            <summary>
+            Triggers when the value is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of type T.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenOutOfRange(`0,`0,Boundary,System.String)">
+            <summary>
+            Triggers when the value is out of given range of <paramref name="left"/> and <paramref name="right"/>.
+            </summary>
+            <param name="left">Left bounday value of Type T.</param>
+            <param name="right">Right bounday value of Type T.</param>
+            <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
+            <param name="message"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenPositive(System.String)">
+            <summary>
+            Triggers when the value is greater than zero (positive).
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenZero(System.String)">
+            <summary>
+            Triggers when the value is equal to zero.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
     </members>
 </doc>
