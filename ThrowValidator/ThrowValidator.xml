@@ -1,0 +1,991 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThrowValidator</name>
+    </assembly>
+    <members>
+        <member name="T:ThrowValidator.Extensions.Runner">
+            <summary>
+            Runner defines extensions for invoking custom actions based on validatable conditions.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.SByte,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.SByte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.SByte},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.SByte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Byte,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Byte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Byte},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Byte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Int16,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Int16},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.UInt16,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.UInt16},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Int32,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Int32},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.UInt32,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.UInt32},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Int64,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Int64},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Int64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.UInt64,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.UInt64},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.UInt64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Single,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Single"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Single},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Single"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Double,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Double"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Double},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Double"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Decimal,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Decimal"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Decimal},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Decimal"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.String,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.String"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.String"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.DateTime,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.DateTime"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.DateTime},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.DateTime"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Boolean,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Boolean"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Nullable{System.Boolean},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Boolean"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/>? (nullable) instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Enum,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Enum"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Enum"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run``1(``0,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <typeparamref name="T"/> construct based on its <paramref name="value"/>.
+            This extends all built-in and custom class type constructs when their type was not specified in other <see cref="T:ThrowValidator.Extensions.Runner"/> extensions built for specific classes.
+            </summary>
+            <typeparam name="T">Class type construct.</typeparam>
+            <param name="value">Value of the <typeparamref name="T"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with class validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run``1(System.Collections.Generic.ICollection{``0},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Collections.Generic.ICollection`1"/> construct based on its <paramref name="collection"/> items.
+            </summary>
+            <typeparam name="T">Class or struct type construct.</typeparam>
+            <param name="collection">Collection list of <typeparamref name="T"/>.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Runner.Run(System.Type,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Runner"/> for invoking <paramref name="action"/> on <see cref="T:System.Type"/> struct based on its <paramref name="type"/>.
+            </summary>
+            <param name="type">Value of the <see cref="T:System.Type"/> instance.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Extensions.Thrower">
+            <summary>
+            Thrower defines extensions for throwing exceptions based on validatable conditions.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.SByte)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.SByte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.SByte,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.SByte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.SByte,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.SByte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.SByte})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.SByte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.SByte},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.SByte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.SByte},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.SByte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.SByte"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.SByte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Byte)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Byte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Byte,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Byte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Byte,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Byte"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Byte})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Byte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Byte},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Byte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Byte},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Byte"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Byte"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Byte"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int16)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int16,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int16,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int16})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int16},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int16},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int16"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt16)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt16,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt16,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt16"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt16})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt16},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt16},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt16"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt16"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int32)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int32,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int32,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int32})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int32},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int32"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt32)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt32,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt32,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt32"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt32})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt32},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt32},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt32"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt32"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt32"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int64)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int64,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Int64,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int64})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Int64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int64},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Int64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Int64},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Int64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Int64"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Int64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt64)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt64,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.UInt64,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt64"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt64})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.UInt64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt64},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.UInt64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.UInt64},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.UInt64"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.UInt64"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.UInt64"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Single)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Single"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Single,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Single"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Single,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Single"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Single})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Single"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Single},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Single"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Single},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Single"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Single"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Single"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Double)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Double"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Double,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Double"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Double,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Double"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Double})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Double"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Double},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Double"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Double},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Double"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Double"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Decimal)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Decimal"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Decimal,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Decimal"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Decimal,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Decimal"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Decimal})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Decimal"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Decimal},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Decimal"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Decimal},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Decimal"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Decimal"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator. T is <see cref="T:System.Decimal"/>.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.String"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.String"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.String,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.String"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.String"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.String,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.String"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.String"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.DateTime)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.DateTime"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.DateTime,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.DateTime"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.DateTime,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.DateTime"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.DateTime})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.DateTime"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.DateTime"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.DateTime},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.DateTime"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.DateTime"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Boolean)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Boolean"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Boolean,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Boolean"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Boolean,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Boolean"/> struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Boolean})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Boolean"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/>? (nullable) instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Boolean"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/>? (nullable) instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Nullable{System.Boolean},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Boolean"/>? (nullable) struct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Boolean"/>? (nullable) instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Enum)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Enum"/> construct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Enum"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Enum,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Enum"/> construct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Enum"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Enum,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Enum"/> construct based on its <paramref name="value"/>.
+            </summary>
+            <param name="value">Value of the <see cref="T:System.Enum"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(``0)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <typeparamref name="T"/> construct based on its <paramref name="value"/>.
+            This extends all built-in and custom class type constructs when their type was not specified in other <see cref="T:ThrowValidator.Extensions.Thrower"/> extensions built for specific classes.
+            </summary>
+            <typeparam name="T">Class type construct.</typeparam>
+            <param name="value">Value of the <typeparamref name="T"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with class validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(``0,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <typeparamref name="T"/> construct based on its <paramref name="value"/>.
+            This extends all built-in and custom class type constructs when their type was not specified in other <see cref="T:ThrowValidator.Extensions.Thrower"/> extensions built for specific classes.
+            </summary>
+            <typeparam name="T">Class type construct.</typeparam>
+            <param name="value">Value of the <typeparamref name="T"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with class validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(``0,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <typeparamref name="T"/> construct based on its <paramref name="value"/>.
+            This extends all built-in and custom class type constructs when their type was not specified in other <see cref="T:ThrowValidator.Extensions.Thrower"/> extensions built for specific classes.
+            </summary>
+            <typeparam name="T">Class type construct.</typeparam>
+            <param name="value">Value of the <typeparamref name="T"/> instance.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with class validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Collections.Generic.ICollection`1"/> construct based on its <paramref name="collection"/> items.
+            </summary>
+            <typeparam name="T">Class or struct type construct.</typeparam>
+            <param name="collection">Collection list of <typeparamref name="T"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Collections.Generic.ICollection`1"/> construct based on its <paramref name="collection"/> items.
+            </summary>
+            <typeparam name="T">Class or struct type construct.</typeparam>
+            <param name="collection">Collection list of <typeparamref name="T"/>.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw``1(System.Collections.Generic.ICollection{``0},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Collections.Generic.ICollection`1"/> construct based on its <paramref name="collection"/> items.
+            </summary>
+            <typeparam name="T">Class or struct type construct.</typeparam>
+            <param name="collection">Collection list of <typeparamref name="T"/>.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Type)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception on <see cref="T:System.Type"/> construct based on its <paramref name="type"/>.
+            </summary>
+            <param name="type">The type as <see cref="T:System.Type"/> instance.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Type,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="message"/> on <see cref="T:System.Type"/> construct based on its <paramref name="type"/>.
+            </summary>
+            <param name="type">The type as <see cref="T:System.Type"/> instance.</param>
+            <param name="message">Custom message in the default exception.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Extensions.Thrower.Throw(System.Type,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Extensions.Thrower"/> for throwing exception with custom <paramref name="exception"/> on <see cref="T:System.Type"/> construct based on its <paramref name="type"/>.
+            </summary>
+            <param name="type">The type as <see cref="T:System.Type"/> instance.</param>
+            <param name="exception"></param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+    </members>
+</doc>
