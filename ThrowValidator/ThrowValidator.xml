@@ -987,5 +987,100 @@
             <param name="exception"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
         </member>
+        <member name="T:ThrowValidator.Validations.BooleanValidator">
+            <summary>
+            Define validations for Boolean (<see cref="T:System.Boolean"/>) values and expressions.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.#ctor(System.Nullable{System.Boolean})">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.BooleanValidator"/> instance with <see cref="T:System.Boolean"/> value to perform validations.
+            </summary>
+            <param name="value">Value to be compared.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.#ctor(System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.BooleanValidator"/> instance with <see cref="T:System.Boolean"/> value to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.#ctor(System.Nullable{System.Boolean},System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.BooleanValidator"/> instance with <see cref="T:System.Boolean"/> value to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.#ctor(System.Nullable{System.Boolean},System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.BooleanValidator"/> instance with <see cref="T:System.Boolean"/> value and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.WhenFalse(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is false.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.WhenNull(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is null.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.BooleanValidator.WhenTrue(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is true.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.IBooleanValidatable">
+            <summary>
+            Define methods to validate Boolean (<see cref="T:System.Boolean"/>) values and expressions.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.IBooleanValidatable.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenNull(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is null.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenTrue(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is true.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IBooleanValidatable.WhenFalse(System.String)">
+            <summary>
+            Triggers when the given <see cref="T:System.Boolean"/> (nullable) expression or value is false.
+            </summary>
+            <param name="message">optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+        </member>
     </members>
 </doc>

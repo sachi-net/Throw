@@ -45,6 +45,9 @@ namespace ThrowUnitTests
             }
 
             Console.ReadKey();
+
+            bool x = true;
+            x.Throw();
         }
 
         static void Show(string message)
