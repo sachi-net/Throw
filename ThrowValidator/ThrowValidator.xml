@@ -1835,9 +1835,295 @@
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
         </member>
+        <member name="T:ThrowValidator.Validations.IStringValidatable">
+            <summary>
+            Define methods to validate <see cref="T:System.String"/> structures.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenWhiteSpaces(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value only contains white-spaces
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is empty.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenEqualTo(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenEqualTo(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is equal to the given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotEqualTo(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotEqualTo(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is not equal to the given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenLengthLongerThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is higher than the given <paramref name="maxLength"/>.
+            </summary>
+            <param name="maxLength">Maximum number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenLengthShorterThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is lower than the given <paramref name="minLength"/>.
+            </summary>
+            <param name="minLength">Minimum number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenMatchWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given <paramref name="pattern"/>.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given <paramref name="pattern"/> with Regular-Expression options.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="options">Regular-Expression options.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenMatchWith(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given Regular-Expression.
+            </summary>
+            <param name="regex">Regular-Expression to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotMatchWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given <paramref name="pattern"/>.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given <paramref name="pattern"/> with Regular-Expression options.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="options">Regular-Expression options.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotMatchWith(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given Regular-Expression.
+            </summary>
+            <param name="regex">Regular-Expression to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenContain(System.Char,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="character"/> at least once.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenContain(System.Char,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="character"/> at least once with string comparison rules.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenContain(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenContain(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotContain(System.Char,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="character"/> at least once.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotContain(System.Char,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="character"/> at least once with string comparison rules.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotContain(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="value"/> at least once.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotContain(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenLengthEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is equal to the given <paramref name="length"/>.
+            </summary>
+            <param name="length">Number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenLengthNotEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is not equal to the given <paramref name="length"/>.
+            </summary>
+            <param name="length">Number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenStartWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value starts with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenStartWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value starts with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotStartWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not start with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotStartWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not start with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenEndWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value ends with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenEndWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value ends with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotEndWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not end with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.IStringValidatable.WhenNotEndWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not end with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
         <member name="T:ThrowValidator.Validations.NumericValidator`1">
             <summary>
-             Define validations for numeric structs.
+            Define validations for numeric structs.
             </summary>
             <typeparam name="T">Numeric struct.</typeparam>
         </member>
@@ -2108,6 +2394,319 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.StringValidator">
+            <summary>
+            Define validations for <see cref="T:System.String"/> structures.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.#ctor(System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.StringValidator"/> instance with <see cref="T:System.String"/> value to perform validations.
+            </summary>
+            <param name="value">String value.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.#ctor(System.String,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.StringValidator"/> instance with <see cref="T:System.String"/> value to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="value">String value.</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.StringValidator"/> instance with <see cref="T:System.String"/> value to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="value">String value.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.#ctor(System.String,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.StringValidator"/> instance with <see cref="T:System.String"/> value and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="value">String value.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.Char,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="character"/> at least once.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.Char,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="character"/> at least once with string comparison rules.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenEmpty(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is empty.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenEndWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value ends with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenEndWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value ends with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenEqualTo(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenEqualTo(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is equal to the given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is equal to the given <paramref name="length"/>.
+            </summary>
+            <param name="length">Number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthLongerThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is higher than the given <paramref name="maxLength"/>.
+            </summary>
+            <param name="maxLength">Maximum number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthNotEqualTo(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is not equal to the given <paramref name="length"/>.
+            </summary>
+            <param name="length">Number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthShorterThan(System.Int32,System.String)">
+            <summary>
+            Triggers when the length of <see cref="T:System.String"/> value is lower than the given <paramref name="minLength"/>.
+            </summary>
+            <param name="minLength">Minimum number of characters to be allowed.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given <paramref name="pattern"/>.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given Regular-Expression.
+            </summary>
+            <param name="regex">Regular-Expression to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> matches with given <paramref name="pattern"/> with Regular-Expression options.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="options">Regular-Expression options.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.Char,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="character"/> at least once.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="value"/> at least once.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.Char,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not contain the given <paramref name="character"/> at least once with string comparison rules.
+            </summary>
+            <param name="character">Character to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> contains the given <paramref name="value"/> at least once with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEndWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not end with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEndWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not end with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEqualTo(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is not equal to the given <paramref name="value"/>.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEqualTo(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value is not equal to the given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">Value to be compared.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given <paramref name="pattern"/>.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given Regular-Expression.
+            </summary>
+            <param name="regex">Regular-Expression to be used in comparison.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> does not match with given <paramref name="pattern"/> with Regular-Expression options.
+            </summary>
+            <param name="pattern">Compilable string pattern to be used in comparison.</param>
+            <param name="options">Regular-Expression options.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotStartWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not start with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNotStartWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value does not start with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenStartWith(System.String,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value starts with given <paramref name="value"/>.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenStartWith(System.String,System.StringComparison,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value starts with given <paramref name="value"/> with string comparison rules.
+            </summary>
+            <param name="value">String to be searched.</param>
+            <param name="comparison">String comparison rule when performing validation.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.StringValidator.WhenWhiteSpaces(System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.String"/> value only contains white-spaces
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
         </member>
     </members>
 </doc>

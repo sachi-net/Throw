@@ -5,7 +5,7 @@ using ThrowValidator.MessageTemplates;
 namespace ThrowValidator.Validations
 {
     /// <summary>
-    ///  Define validations for numeric structs.
+    /// Define validations for numeric structs.
     /// </summary>
     /// <typeparam name="T">Numeric struct.</typeparam>
     public class NumericValidator<T> : ValidationBase, INumericValidatable<T> where T : IComparable<T>
