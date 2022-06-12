@@ -56,6 +56,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IEnumValidatable"/> with enum validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public IEnumValidatable When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -73,6 +74,7 @@ namespace ThrowValidator.Validations
         /// <param name="enum">Enum value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IEnumValidatable"/> with enum validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IEnumValidatable WhenEqualTo(Enum @enum, string message = null)
         {
             if (this.@enum.GetHashCode() == @enum.GetHashCode())
@@ -89,6 +91,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IEnumValidatable"/> with enum validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IEnumValidatable WhenNull(string message = null)
         {
             if (@enum is null)
@@ -106,6 +109,7 @@ namespace ThrowValidator.Validations
         /// <param name="enumIndex">Enum index to be evaluated.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IEnumValidatable"/> with enum validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IEnumValidatable WhenOutOfRange(int enumIndex, string message = null)
         {
             if (!Enum.IsDefined(@enum.GetType(), @enum))

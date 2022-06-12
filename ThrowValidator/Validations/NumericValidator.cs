@@ -57,6 +57,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public INumericValidatable<T> When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -74,6 +75,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenEqualTo(T value, string message = null)
         {
             if (this.value.CompareTo(value) is 0)
@@ -91,6 +93,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenGreaterThan(T value, string message = null)
         {
             if (this.value.CompareTo(value) > 0)
@@ -108,6 +111,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenGreaterThanOrEqualTo(T value, string message = null)
         {
             if (this.value.CompareTo(value) >= 0)
@@ -127,6 +131,7 @@ namespace ThrowValidator.Validations
         /// <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
         /// <param name="message"></param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="RangeNotMatchException">Throws default exception.</exception>
         public INumericValidatable<T> WhenInRange(T left, T right, Boundary boundary = Boundary.Inclusive, string message = null)
         {
             bool isInRange = false;
@@ -168,6 +173,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenLessThan(T value, string message = null)
         {
             if (this.value.CompareTo(value) < 0)
@@ -185,6 +191,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenLessThanOrEqualTo(T value, string message = null)
         {
             if (this.value.CompareTo(value) <= 0)
@@ -201,6 +208,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenNegative(string message = null)
         {
             T value = (T)Convert.ChangeType(0, typeof(T));
@@ -219,6 +227,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value of type T.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenNotEqualTo(T value, string message = null)
         {
             if (this.value.CompareTo(value) is not 0)
@@ -235,6 +244,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenNull(string message = null)
         {
             if (value is null)
@@ -254,6 +264,7 @@ namespace ThrowValidator.Validations
         /// <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
         /// <param name="message"></param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="RangeNotMatchException">Throws default exception.</exception>
         public INumericValidatable<T> WhenOutOfRange(T left, T right, Boundary boundary = Boundary.Exclusive, string message = null)
         {
             bool isOutOfRange = false;
@@ -294,6 +305,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenPositive(string message = null)
         {
             T value = (T)Convert.ChangeType(0, typeof(T));
@@ -311,6 +323,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="INumericValidatable{T}"/> with numeric validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public INumericValidatable<T> WhenZero(string message = null)
         {
             T value = (T)Convert.ChangeType(0, typeof(T));

@@ -61,6 +61,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public IStringValidatable When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -78,6 +79,7 @@ namespace ThrowValidator.Validations
         /// <param name="character">Character to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenContain(char character, string message = null)
         {
             if (value.Contains(character))
@@ -95,6 +97,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenContain(string value, string message = null)
         {
             if (this.value.Contains(value))
@@ -113,6 +116,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenContain(char character, StringComparison comparison, string message = null)
         {
             if (value.Contains(character, comparison))
@@ -131,6 +135,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenContain(string value, StringComparison comparison, string message = null)
         {
             if (this.value.Contains(value, comparison))
@@ -147,6 +152,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenEmpty(string message = null)
         {
             if (value == string.Empty)
@@ -164,6 +170,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenEndWith(string value, string message = null)
         {
             if (this.value.EndsWith(value))
@@ -182,6 +189,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenEndWith(string value, StringComparison comparison, string message = null)
         {
             if (this.value.EndsWith(value, comparison))
@@ -199,6 +207,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenEqualTo(string value, string message = null)
         {
             if (this.value.Equals(value))
@@ -217,6 +226,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenEqualTo(string value, StringComparison comparison, string message = null)
         {
             if (this.value.Equals(value, comparison))
@@ -234,6 +244,7 @@ namespace ThrowValidator.Validations
         /// <param name="length">Number of characters to be allowed.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenLengthEqualTo(int length, string message = null)
         {
             if (value.Length == length)
@@ -251,6 +262,7 @@ namespace ThrowValidator.Validations
         /// <param name="maxLength">Maximum number of characters to be allowed.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenLengthLongerThan(int maxLength, string message = null)
         {
             if (value.Length > maxLength)
@@ -268,6 +280,7 @@ namespace ThrowValidator.Validations
         /// <param name="length">Number of characters to be allowed.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenLengthNotEqualTo(int length, string message = null)
         {
             if (value.Length != length)
@@ -285,6 +298,7 @@ namespace ThrowValidator.Validations
         /// <param name="minLength">Minimum number of characters to be allowed.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenLengthShorterThan(int minLength, string message = null)
         {
             if (value.Length < minLength)
@@ -302,6 +316,7 @@ namespace ThrowValidator.Validations
         /// <param name="pattern">Compilable string pattern to be used in comparison.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenMatchWith(string pattern, string message = null)
         {
             Regex regex = new(pattern);
@@ -320,6 +335,7 @@ namespace ThrowValidator.Validations
         /// <param name="regex">Regular-Expression to be used in comparison.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenMatchWith(Regex regex, string message = null)
         {
             if (regex.IsMatch(value))
@@ -338,6 +354,7 @@ namespace ThrowValidator.Validations
         /// <param name="options">Regular-Expression options.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenMatchWith(string pattern, RegexOptions options, string message = null)
         {
             if (Regex.IsMatch(value, pattern, options))
@@ -355,6 +372,7 @@ namespace ThrowValidator.Validations
         /// <param name="character">Character to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotContain(char character, string message = null)
         {
             if (!value.Contains(character))
@@ -372,6 +390,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotContain(string value, string message = null)
         {
             if (!this.value.Contains(value))
@@ -390,6 +409,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotContain(char character, StringComparison comparison, string message = null)
         {
             if (!value.Contains(character, comparison))
@@ -408,6 +428,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotContain(string value, StringComparison comparison, string message = null)
         {
             if (!this.value.Contains(value, comparison))
@@ -425,6 +446,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotEndWith(string value, string message = null)
         {
             if (!this.value.EndsWith(value))
@@ -443,6 +465,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotEndWith(string value, StringComparison comparison, string message = null)
         {
             if (!this.value.EndsWith(value, comparison))
@@ -460,6 +483,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotEqualTo(string value, string message = null)
         {
             if (!this.value.Equals(value))
@@ -478,6 +502,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotEqualTo(string value, StringComparison comparison, string message = null)
         {
             if (!this.value.Equals(value, comparison))
@@ -495,6 +520,7 @@ namespace ThrowValidator.Validations
         /// <param name="pattern">Compilable string pattern to be used in comparison.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotMatchWith(string pattern, string message = null)
         {
             Regex regex = new(pattern);
@@ -513,6 +539,7 @@ namespace ThrowValidator.Validations
         /// <param name="regex">Regular-Expression to be used in comparison.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotMatchWith(Regex regex, string message = null)
         {
             if (!regex.IsMatch(value))
@@ -531,6 +558,7 @@ namespace ThrowValidator.Validations
         /// <param name="options">Regular-Expression options.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotMatchWith(string pattern, RegexOptions options, string message = null)
         {
             if (!Regex.IsMatch(value, pattern, options))
@@ -548,6 +576,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotStartWith(string value, string message = null)
         {
             if (!this.value.StartsWith(value))
@@ -566,6 +595,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNotStartWith(string value, StringComparison comparison, string message = null)
         {
             if (!this.value.StartsWith(value, comparison))
@@ -582,6 +612,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenNull(string message = null)
         {
             if (value is null)
@@ -599,6 +630,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">String to be searched.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenStartWith(string value, string message = null)
         {
             if (this.value.StartsWith(value))
@@ -617,6 +649,7 @@ namespace ThrowValidator.Validations
         /// <param name="comparison">String comparison rule when performing validation.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenStartWith(string value, StringComparison comparison, string message = null)
         {
             if (this.value.StartsWith(value, comparison))
@@ -633,6 +666,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IStringValidatable"/> with string validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IStringValidatable WhenWhiteSpaces(string message = null)
         {
             if (value.Replace(" ", string.Empty) == string.Empty)

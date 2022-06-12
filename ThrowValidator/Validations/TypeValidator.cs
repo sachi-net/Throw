@@ -56,6 +56,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ITypeValidatable"/> with type validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ITypeValidatable When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -73,6 +74,7 @@ namespace ThrowValidator.Validations
         /// <param name="type">Type to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ITypeValidatable"/> with type validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ITypeValidatable WhenEqualTo(Type type, string message = null)
         {
             if (this.type == type)
@@ -90,6 +92,7 @@ namespace ThrowValidator.Validations
         /// <param name="type">Type to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ITypeValidatable"/> with type validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ITypeValidatable WhenNotEqualTo(Type type, string message = null)
         {
             if (this.type != type)
@@ -106,6 +109,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ITypeValidatable"/> with type validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ITypeValidatable WhenNull(string message = null)
         {
             if (type is null)

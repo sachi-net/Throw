@@ -60,6 +60,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public IDateTimeValidatable When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -77,6 +78,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenEqualTo(DateTime? dateTime, string message = null)
         {
             if (this.dateTime == dateTime)
@@ -94,6 +96,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenGreaterThan(DateTime? dateTime, string message = null)
         {
             if (this.dateTime > dateTime)
@@ -111,6 +114,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenGreaterThanOrEqualTo(DateTime? dateTime, string message = null)
         {
             if (this.dateTime >= dateTime)
@@ -130,6 +134,7 @@ namespace ThrowValidator.Validations
         /// <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="RangeNotMatchException">Throws default exception.</exception>
         public IDateTimeValidatable WhenInRange(DateTime? left, DateTime? right, Boundary boundary = Boundary.Inclusive, string message = null)
         {
             bool isInRange = false;
@@ -171,6 +176,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenLessThan(DateTime? dateTime, string message = null)
         {
             if (this.dateTime < dateTime)
@@ -188,6 +194,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenLessThanOrEqualTo(DateTime? dateTime, string message = null)
         {
             if (this.dateTime <= dateTime)
@@ -205,6 +212,7 @@ namespace ThrowValidator.Validations
         /// <param name="dateTime">Date-time value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenNotEqualTo(DateTime? dateTime, string message = null)
         {
             if (this.dateTime != dateTime)
@@ -221,6 +229,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IDateTimeValidatable WhenNull(string message = null)
         {
             if (dateTime is null)
@@ -240,6 +249,7 @@ namespace ThrowValidator.Validations
         /// <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IDateTimeValidatable"/> with date-time validator.</returns>
+        /// <exception cref="RangeNotMatchException">Throws default exception.</exception>
         public IDateTimeValidatable WhenOutOfRange(DateTime? left, DateTime? right, Boundary boundary = Boundary.Exclusive, string message = null)
         {
             bool isOutOfRange = false;

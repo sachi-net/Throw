@@ -61,6 +61,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICustomTypeValidatable{T}"/> with custom-type validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ICustomTypeValidatable<T> When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -78,6 +79,7 @@ namespace ThrowValidator.Validations
         /// <param name="predicate">Boolean predicate condition of this object.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICustomTypeValidatable{T}"/> with custom-type validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ICustomTypeValidatable<T> When(Func<T, bool> predicate, string message = null)
         {
             if (predicate.Invoke(value))
@@ -95,6 +97,7 @@ namespace ThrowValidator.Validations
         /// <param name="predicate">Boolean predicate condition of this object.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICustomTypeValidatable{T}"/> with custom-type validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ICustomTypeValidatable<T> WhenNot(Func<T, bool> predicate, string message = null)
         {
             if (!predicate.Invoke(value))
@@ -111,6 +114,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICustomTypeValidatable{T}"/> with custom-type validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICustomTypeValidatable<T> WhenNull(string message = null)
         {
             if (value is null)

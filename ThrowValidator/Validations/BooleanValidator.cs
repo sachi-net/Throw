@@ -56,6 +56,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IBooleanValidatable"/> with boolean validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public IBooleanValidatable When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -72,6 +73,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IBooleanValidatable"/> with boolean validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IBooleanValidatable WhenFalse(string message = null)
         {
             if (value is false)
@@ -88,6 +90,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IBooleanValidatable"/> with boolean validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IBooleanValidatable WhenNull(string message = null)
         {
             if (value is null)
@@ -104,6 +107,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="IBooleanValidatable"/> with boolean validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public IBooleanValidatable WhenTrue(string message = null)
         {
             if (value is true)

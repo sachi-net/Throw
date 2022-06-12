@@ -58,6 +58,7 @@ namespace ThrowValidator.Validations
         /// <param name="condition">Boolean predicate condition.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ICollectionValidatable<T> When(Func<bool> condition, string message = null)
         {
             if (condition.Invoke())
@@ -75,6 +76,7 @@ namespace ThrowValidator.Validations
         /// <param name="predicate"></param>
         /// <param name="message"></param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenAny(Func<T, bool> predicate, string message = null)
         {
             if (collection.Where(predicate)?.Count() > 0)
@@ -92,6 +94,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be checked in the list.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenContain(T value, string message = null)
         {
             if (collection.Contains(value))
@@ -109,6 +112,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountEqualTo(int value, string message = null)
         {
             if (collection.Count == value)
@@ -126,6 +130,7 @@ namespace ThrowValidator.Validations
         /// <param name="maximum">Maximum value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountGreaterThan(int maximum, string message = null)
         {
             if (collection.Count > maximum)
@@ -143,6 +148,7 @@ namespace ThrowValidator.Validations
         /// <param name="maximum">Maximum value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountGreaterThanOrEqualTo(int maximum, string message = null)
         {
             if (collection.Count >= maximum)
@@ -160,6 +166,7 @@ namespace ThrowValidator.Validations
         /// <param name="minimum">Minimum value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountLessThan(int minimum, string message = null)
         {
             if (collection.Count < minimum)
@@ -177,6 +184,7 @@ namespace ThrowValidator.Validations
         /// <param name="minimum">Minimum value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountLessThanOrEqualTo(int minimum, string message = null)
         {
             if (collection.Count <= minimum)
@@ -194,6 +202,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be compared.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenCountNotEqualTo(int value, string message = null)
         {
             if (collection.Count != value)
@@ -210,6 +219,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenEmpty(string message = null)
         {
             if (collection.Count == 0)
@@ -227,6 +237,7 @@ namespace ThrowValidator.Validations
         /// <param name="value">Value to be checked in the list.</param>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ConditionNotMeetException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenNotContain(T value, string message = null)
         {
             if (!collection.Contains(value))
@@ -243,6 +254,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenNotEmpty(string message = null)
         {
             if (collection.Count > 0)
@@ -259,6 +271,7 @@ namespace ThrowValidator.Validations
         /// </summary>
         /// <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
         /// <returns>Returns <see cref="ICollectionValidatable{T}"/> with collection validator.</returns>
+        /// <exception cref="ArgumentException">Throws default exception.</exception>
         public ICollectionValidatable<T> WhenNull(string message = null)
         {
             if (collection is null)
