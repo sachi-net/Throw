@@ -2121,6 +2121,42 @@
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
         </member>
+        <member name="T:ThrowValidator.Validations.ITypeValidatable">
+            <summary>
+            Define methods to validate <see cref="T:System.Type"/> constructs.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.ITypeValidatable.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ITypeValidatable.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ITypeValidatable.WhenEqualTo(System.Type,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Type"/> is equal to the given <paramref name="type"/>.
+            </summary>
+            <param name="type">Type to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.ITypeValidatable.WhenNotEqualTo(System.Type,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Type"/> is not equal to the given <paramref name="type"/>.
+            </summary>
+            <param name="type">Type to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
         <member name="T:ThrowValidator.Validations.NumericValidator`1">
             <summary>
             Define validations for numeric structs.
@@ -2707,6 +2743,69 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+        </member>
+        <member name="T:ThrowValidator.Validations.TypeValidator">
+            <summary>
+            Define validations for <see cref="T:System.Type"/> constructs.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.#ctor(System.Type)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.TypeValidator"/> instance with <see cref="T:System.Type"/> to perform validations.
+            </summary>
+            <param name="type">Type construct.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.#ctor(System.Type,System.String)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.TypeValidator"/> instance with <see cref="T:System.Type"/> to perform validations with custom <paramref name="message"/>.
+            </summary>
+            <param name="type">Type construct.</param>
+            <param name="message">Custom message in the default exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.#ctor(System.Type,System.Exception)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.TypeValidator"/> instance with <see cref="T:System.Type"/> to perform validations with custom <paramref name="exception"/>.
+            </summary>
+            <param name="type">Type construct.</param>
+            <param name="exception">Any exception derived from <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.#ctor(System.Type,System.Action)">
+            <summary>
+            Initialize <see cref="T:ThrowValidator.Validations.TypeValidator"/> instance with <see cref="T:System.Type"/> and <paramref name="action"/> to invoke when triggering validations.
+            </summary>
+            <param name="type">Type construct.</param>
+            <param name="action">Custom action of type <see cref="T:System.Action"/> with no arguments.</param>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.When(System.Func{System.Boolean},System.String)">
+            <summary>
+            Triggers when the given <paramref name="condition"/> evaluated to be true.
+            </summary>
+            <param name="condition">Boolean predicate condition.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.WhenEqualTo(System.Type,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Type"/> is equal to the given <paramref name="type"/>.
+            </summary>
+            <param name="type">Type to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.WhenNotEqualTo(System.Type,System.String)">
+            <summary>
+            Triggers when the <see cref="T:System.Type"/> is not equal to the given <paramref name="type"/>.
+            </summary>
+            <param name="type">Type to be compared.</param>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+        </member>
+        <member name="M:ThrowValidator.Validations.TypeValidator.WhenNull(System.String)">
+            <summary>
+            Triggers when the value is null.
+            </summary>
+            <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
+            <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
         </member>
     </members>
 </doc>
