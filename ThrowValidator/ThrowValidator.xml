@@ -4,6 +4,31 @@
         <name>ThrowValidator</name>
     </assembly>
     <members>
+        <member name="T:Boundary">
+            <summary>
+            Boundary restriction rules when comparing a value with respect to left (lower-bound) and right (upper-bound) margins.
+            </summary>
+        </member>
+        <member name="F:Boundary.Inclusive">
+            <summary>
+            Include both left and right margins while evaluating the range.
+            </summary>
+        </member>
+        <member name="F:Boundary.Exclusive">
+            <summary>
+            Exclude both left and right margins while evaluating the range.
+            </summary>
+        </member>
+        <member name="F:Boundary.LeftOnly">
+            <summary>
+            Include only left but not the right margins while evaluating the range.
+            </summary>
+        </member>
+        <member name="F:Boundary.RightOnly">
+            <summary>
+            Include only right but not the left margins while evaluating the range.
+            </summary>
+        </member>
         <member name="T:ThrowValidator.Exceptions.ConditionNotMeetException">
             <summary>
             Exception when the conditinal predicate does not meet.
