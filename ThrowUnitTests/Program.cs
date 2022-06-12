@@ -45,6 +45,9 @@ namespace ThrowUnitTests
             }
 
             Console.ReadKey();
+
+            Boundary? x = null;
+            x.Throw();
         }
 
         static void Show(string message)

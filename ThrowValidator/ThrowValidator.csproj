@@ -8,4 +8,12 @@
     <Copyright>Sachintha-PC</Copyright>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ThrowValidator.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>ThrowValidator.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
