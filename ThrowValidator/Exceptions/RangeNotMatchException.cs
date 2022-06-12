@@ -2,7 +2,7 @@
 
 namespace ThrowValidator.Exceptions
 {
-    internal class RangeNotMatchException : Exception
+    public class RangeNotMatchException : Exception
     {
         public RangeNotMatchException()
         {

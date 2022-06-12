@@ -1026,6 +1026,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenFalse(System.String)">
             <summary>
@@ -1033,6 +1034,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenNull(System.String)">
             <summary>
@@ -1040,6 +1042,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.BooleanValidator.WhenTrue(System.String)">
             <summary>
@@ -1047,6 +1050,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IBooleanValidatable"/> with boolean validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.CollectionValidator`1">
             <summary>
@@ -1087,6 +1091,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenAny(System.Func{`0,System.Boolean},System.String)">
             <summary>
@@ -1095,6 +1100,7 @@
             <param name="predicate"></param>
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenContain(`0,System.String)">
             <summary>
@@ -1103,6 +1109,7 @@
             <param name="value">Value to be checked in the list.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountEqualTo(System.Int32,System.String)">
             <summary>
@@ -1111,6 +1118,7 @@
             <param name="value">Value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountGreaterThan(System.Int32,System.String)">
             <summary>
@@ -1119,6 +1127,7 @@
             <param name="maximum">Maximum value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountGreaterThanOrEqualTo(System.Int32,System.String)">
             <summary>
@@ -1127,6 +1136,7 @@
             <param name="maximum">Maximum value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountLessThan(System.Int32,System.String)">
             <summary>
@@ -1135,6 +1145,7 @@
             <param name="minimum">Minimum value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountLessThanOrEqualTo(System.Int32,System.String)">
             <summary>
@@ -1143,6 +1154,7 @@
             <param name="minimum">Minimum value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenCountNotEqualTo(System.Int32,System.String)">
             <summary>
@@ -1151,6 +1163,7 @@
             <param name="value">Value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenEmpty(System.String)">
             <summary>
@@ -1158,6 +1171,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNotContain(`0,System.String)">
             <summary>
@@ -1166,6 +1180,7 @@
             <param name="value">Value to be checked in the list.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNotEmpty(System.String)">
             <summary>
@@ -1173,6 +1188,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CollectionValidator`1.WhenNull(System.String)">
             <summary>
@@ -1180,6 +1196,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICollectionValidatable`1"/> with collection validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.CustomValidator`1">
             <summary>
@@ -1221,6 +1238,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with custom-type validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CustomValidator`1.When(System.Func{`0,System.Boolean},System.String)">
             <summary>
@@ -1229,6 +1247,7 @@
             <param name="predicate">Boolean predicate condition of this object.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with custom-type validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CustomValidator`1.WhenNot(System.Func{`0,System.Boolean},System.String)">
             <summary>
@@ -1237,6 +1256,7 @@
             <param name="predicate">Boolean predicate condition of this object.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with custom-type validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.CustomValidator`1.WhenNull(System.String)">
             <summary>
@@ -1244,6 +1264,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ICustomTypeValidatable`1"/> with custom-type validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.DateTimeValidator">
             <summary>
@@ -1284,6 +1305,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenEqualTo(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1292,6 +1314,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenGreaterThan(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1300,6 +1323,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenGreaterThanOrEqualTo(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1308,6 +1332,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenInRange(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Boundary,System.String)">
             <summary>
@@ -1318,6 +1343,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenLessThan(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1326,6 +1352,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenLessThanOrEqualTo(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1334,6 +1361,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenNotEqualTo(System.Nullable{System.DateTime},System.String)">
             <summary>
@@ -1342,6 +1370,7 @@
             <param name="dateTime">Date-time value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenNull(System.String)">
             <summary>
@@ -1349,6 +1378,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.DateTimeValidator.WhenOutOfRange(System.Nullable{System.DateTime},System.Nullable{System.DateTime},Boundary,System.String)">
             <summary>
@@ -1359,6 +1389,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IDateTimeValidatable"/> with date-time validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.EnumValidator">
             <summary>
@@ -1399,6 +1430,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.EnumValidator.WhenEqualTo(System.Enum,System.String)">
             <summary>
@@ -1407,6 +1439,7 @@
             <param name="enum">Enum value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.EnumValidator.WhenNull(System.String)">
             <summary>
@@ -1414,6 +1447,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.EnumValidator.WhenOutOfRange(System.Int32,System.String)">
             <summary>
@@ -1422,6 +1456,7 @@
             <param name="enumIndex">Enum index to be evaluated.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IEnumValidatable"/> with enum validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.IBooleanValidatable">
             <summary>
@@ -2197,6 +2232,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenEqualTo(`0,System.String)">
             <summary>
@@ -2205,6 +2241,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenGreaterThan(`0,System.String)">
             <summary>
@@ -2213,6 +2250,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenGreaterThanOrEqualTo(`0,System.String)">
             <summary>
@@ -2221,6 +2259,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenInRange(`0,`0,Boundary,System.String)">
             <summary>
@@ -2231,6 +2270,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenLessThan(`0,System.String)">
             <summary>
@@ -2239,6 +2279,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenLessThanOrEqualTo(`0,System.String)">
             <summary>
@@ -2247,6 +2288,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNegative(System.String)">
             <summary>
@@ -2254,6 +2296,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNotEqualTo(`0,System.String)">
             <summary>
@@ -2262,6 +2305,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenNull(System.String)">
             <summary>
@@ -2269,6 +2313,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenOutOfRange(`0,`0,Boundary,System.String)">
             <summary>
@@ -2279,6 +2324,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenPositive(System.String)">
             <summary>
@@ -2286,6 +2332,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidator`1.WhenZero(System.String)">
             <summary>
@@ -2293,6 +2340,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.NumericValidatorNullable`1">
             <summary>
@@ -2334,6 +2382,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenEqualTo(`0,System.String)">
             <summary>
@@ -2342,6 +2391,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenGreaterThan(`0,System.String)">
             <summary>
@@ -2350,6 +2400,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenGreaterThanOrEqualTo(`0,System.String)">
             <summary>
@@ -2358,6 +2409,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenInRange(`0,`0,Boundary,System.String)">
             <summary>
@@ -2368,6 +2420,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenLessThan(`0,System.String)">
             <summary>
@@ -2376,6 +2429,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenLessThanOrEqualTo(`0,System.String)">
             <summary>
@@ -2384,6 +2438,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNegative(System.String)">
             <summary>
@@ -2391,6 +2446,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNotEqualTo(`0,System.String)">
             <summary>
@@ -2399,6 +2455,7 @@
             <param name="value">Value of type T.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenNull(System.String)">
             <summary>
@@ -2406,6 +2463,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenOutOfRange(`0,`0,Boundary,System.String)">
             <summary>
@@ -2416,6 +2474,7 @@
             <param name="boundary">Boundary value comparison whether Inclusive, Exclusive, LeftOnly or RightOnly.</param>
             <param name="message"></param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.RangeNotMatchException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenPositive(System.String)">
             <summary>
@@ -2423,6 +2482,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.NumericValidatorNullable`1.WhenZero(System.String)">
             <summary>
@@ -2430,6 +2490,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.INumericValidatable`1"/> with numeric validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.StringValidator">
             <summary>
@@ -2470,6 +2531,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.Char,System.String)">
             <summary>
@@ -2478,6 +2540,7 @@
             <param name="character">Character to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.String,System.String)">
             <summary>
@@ -2486,6 +2549,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.Char,System.StringComparison,System.String)">
             <summary>
@@ -2495,6 +2559,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenContain(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2504,6 +2569,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenEmpty(System.String)">
             <summary>
@@ -2511,6 +2577,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenEndWith(System.String,System.String)">
             <summary>
@@ -2519,6 +2586,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenEndWith(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2528,6 +2596,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenEqualTo(System.String,System.String)">
             <summary>
@@ -2536,6 +2605,7 @@
             <param name="value">Value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenEqualTo(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2545,6 +2615,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthEqualTo(System.Int32,System.String)">
             <summary>
@@ -2553,6 +2624,7 @@
             <param name="length">Number of characters to be allowed.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthLongerThan(System.Int32,System.String)">
             <summary>
@@ -2561,6 +2633,7 @@
             <param name="maxLength">Maximum number of characters to be allowed.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthNotEqualTo(System.Int32,System.String)">
             <summary>
@@ -2569,6 +2642,7 @@
             <param name="length">Number of characters to be allowed.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenLengthShorterThan(System.Int32,System.String)">
             <summary>
@@ -2577,6 +2651,7 @@
             <param name="minLength">Minimum number of characters to be allowed.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.String,System.String)">
             <summary>
@@ -2585,6 +2660,7 @@
             <param name="pattern">Compilable string pattern to be used in comparison.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.Text.RegularExpressions.Regex,System.String)">
             <summary>
@@ -2593,6 +2669,7 @@
             <param name="regex">Regular-Expression to be used in comparison.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
             <summary>
@@ -2602,6 +2679,7 @@
             <param name="options">Regular-Expression options.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.Char,System.String)">
             <summary>
@@ -2610,6 +2688,7 @@
             <param name="character">Character to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.String,System.String)">
             <summary>
@@ -2618,6 +2697,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.Char,System.StringComparison,System.String)">
             <summary>
@@ -2627,6 +2707,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotContain(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2636,6 +2717,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEndWith(System.String,System.String)">
             <summary>
@@ -2644,6 +2726,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEndWith(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2653,6 +2736,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEqualTo(System.String,System.String)">
             <summary>
@@ -2661,6 +2745,7 @@
             <param name="value">Value to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotEqualTo(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2670,6 +2755,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.String,System.String)">
             <summary>
@@ -2678,6 +2764,7 @@
             <param name="pattern">Compilable string pattern to be used in comparison.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.Text.RegularExpressions.Regex,System.String)">
             <summary>
@@ -2686,6 +2773,7 @@
             <param name="regex">Regular-Expression to be used in comparison.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotMatchWith(System.String,System.Text.RegularExpressions.RegexOptions,System.String)">
             <summary>
@@ -2695,6 +2783,7 @@
             <param name="options">Regular-Expression options.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotStartWith(System.String,System.String)">
             <summary>
@@ -2703,6 +2792,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNotStartWith(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2712,6 +2802,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenNull(System.String)">
             <summary>
@@ -2719,6 +2810,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenStartWith(System.String,System.String)">
             <summary>
@@ -2727,6 +2819,7 @@
             <param name="value">String to be searched.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenStartWith(System.String,System.StringComparison,System.String)">
             <summary>
@@ -2736,6 +2829,7 @@
             <param name="comparison">String comparison rule when performing validation.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.StringValidator.WhenWhiteSpaces(System.String)">
             <summary>
@@ -2743,6 +2837,7 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.IStringValidatable"/> with string validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="T:ThrowValidator.Validations.TypeValidator">
             <summary>
@@ -2783,6 +2878,7 @@
             <param name="condition">Boolean predicate condition.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+            <exception cref="T:ThrowValidator.Exceptions.ConditionNotMeetException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.TypeValidator.WhenEqualTo(System.Type,System.String)">
             <summary>
@@ -2791,6 +2887,7 @@
             <param name="type">Type to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.TypeValidator.WhenNotEqualTo(System.Type,System.String)">
             <summary>
@@ -2799,6 +2896,7 @@
             <param name="type">Type to be compared.</param>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
         </member>
         <member name="M:ThrowValidator.Validations.TypeValidator.WhenNull(System.String)">
             <summary>
@@ -2806,6 +2904,27 @@
             </summary>
             <param name="message">Optional message to be shown in the exception when the validation triggered.</param>
             <returns>Returns <see cref="T:ThrowValidator.Validations.ITypeValidatable"/> with type validator.</returns>
+            <exception cref="T:System.ArgumentException">Throws default exception.</exception>
+        </member>
+        <member name="T:ThrowValidator.Validations.ValidationBase">
+            <summary>
+            Share validation-base properties.
+            </summary>
+        </member>
+        <member name="F:ThrowValidator.Validations.ValidationBase._message">
+            <summary>
+            Validation message to be shown.
+            </summary>
+        </member>
+        <member name="F:ThrowValidator.Validations.ValidationBase.action">
+            <summary>
+            Action method to be invoked when failing the validation
+            </summary>
+        </member>
+        <member name="F:ThrowValidator.Validations.ValidationBase.exception">
+            <summary>
+            Custom exception to be thrown instead of the default exception.
+            </summary>
         </member>
     </members>
 </doc>
