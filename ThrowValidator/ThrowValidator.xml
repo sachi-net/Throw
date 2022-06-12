@@ -4,6 +4,52 @@
         <name>ThrowValidator</name>
     </assembly>
     <members>
+        <member name="T:ThrowValidator.Exceptions.ConditionNotMeetException">
+            <summary>
+            Exception when the conditinal predicate does not meet.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.ConditionNotMeetException.#ctor">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.ConditionNotMeetException"/>.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.ConditionNotMeetException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.ConditionNotMeetException"/> with specified <paramref name="message"/>.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.ConditionNotMeetException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.ConditionNotMeetException"/> with specified <paramref name="message"/> and <paramref name="inner"/> exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="T:ThrowValidator.Exceptions.RangeNotMatchException">
+            <summary>
+            Exception when the value does not fall into the given range.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.RangeNotMatchException.#ctor">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.RangeNotMatchException"/>.
+            </summary>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.RangeNotMatchException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.RangeNotMatchException"/> with specified <paramref name="message"/>.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:ThrowValidator.Exceptions.RangeNotMatchException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of <see cref="T:ThrowValidator.Exceptions.RangeNotMatchException"/> with specified <paramref name="message"/> and <paramref name="inner"/> exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
         <member name="T:ThrowValidator.Extensions.Runner">
             <summary>
             Runner defines extensions for invoking custom actions based on validatable conditions.
