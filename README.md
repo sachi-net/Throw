@@ -29,11 +29,11 @@ age.Throw()
   .WhenNegative("This is unreal!")
   .WhenInRange(13, 19, "Teenagers not allowed!");
 ```
-#### _In other words, `Throw` can translate imperative flow of validations into declarative statement_
+#### _In other words, `Throw` can translate imperative flow of validations into a declarative statement_
 > **Note** &nbsp; There are more validations which can be done by `Throw` with other types as well...
 
 ## Implementation Overview
-`Throw` provides these additional validatable functions on different types as _Extension methods_. There are two main constructs within `Throw` library which extends other types. They are
+`Throw` provides these additional validatable functions on different types as _Extension methods_. There are two main constructs within `Throw` library which extends other types. They are...
 * `Thrower`  
 Thrower construct extends the validatability of .NET built-in types using the extension method named `Throw`. Literally, `Throw` is used to throw exceptions on an event of failing any given validation on that type extended by the Thrower. For example,
 ```C#
@@ -49,4 +49,43 @@ age.Run(TerminateRequest).WhenNull().WhenZero().WhenNegative();
 void TerminateRequest() => Console.WriteLine("Bad Request by invalid age!");
 ```
 
-Both of these are accessible in any context by the namespace reference of `using Throw.Extensions;` at the top-level or in global-usings.
+Both of these are accessible in any context by the namespace reference of `using Throw.Extensions;` at the top-level or in global-usings. These enable the extensions on following constructs.
+#### Numeric constructs
+* `sbyte`, `sbyte?`
+* `byte`, `byte?`
+* `short`, `short?`
+* `ushort`, `ushort?`
+* `int`, `int?`
+* `uint`, `uint?`
+* `long`, `long?`
+* `ulong`, `ulong?`
+* `float`, `float?`
+* `double`, `double?`
+* `decimal`, `decimal?`
+
+#### Non-Numeric constructs
+* `string`
+* `bool`, `bool?`
+* `DateTime`, `DateTime?`
+* `Enum`
+* `Type`
+* `ICollection<T>`
+* `T` as any generic type
+
+> **Warning** The extensions on generic type `T` is available for any construct where the type is from `class`.
+
+### Thrower Extensions
+Thrower provides following three extensions on the above structures.
+
+|Extension|Description|
+|--|--|
+|`Throw()`|Initialize to throw exception based on construct value or its properties|
+|`Throw(string)`|Initialize to throw exception based on construct value or its properties with a custom message|
+|`Throw(Exception)`|Initialize to throw custom exception based on construct value or its properties|
+
+### Runner Extensions
+Runner provides following three extensions on the above structures.
+
+|Extension|Description|
+|--|--|
+|`Run(Action)`|Initialize to invoke the action based on construct value or its properties|
