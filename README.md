@@ -223,3 +223,11 @@ birthDay.Throw().WhenOutOfRange(new DateTime(1970, 1, 1), new DateTime(1980, 12,
 ```
 
 > **Note** &nbsp; `WhenNull([string])` validator triggers its validations with nullable types only.
+
+### Enum Validators
+```C#
+boundaryEnum.Throw().When(() => boundaryEnum == Boundary.Inclusive, "Invalid enum value."); // Triggers when meet the custom condition.
+boundaryEnum.Throw().WhenEqualTo(Boundary.LeftOnly, "Boundary cannot apply LeftOnly."); // Triggers when this enum value is equalts to the given enum value
+boundaryEnum.Throw().WhenNull("Boundary value cannot be null.");
+boundaryEnum.Throw().WhenOutOfRange(-5, "-5 index is not defined in Boundary."); // Triggers when the given enum index is not defined in this enum.
+```
