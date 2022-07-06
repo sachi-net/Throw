@@ -240,7 +240,7 @@ myType.Throw().WhenNotEqualTo(typeof(string), "Type is not a string."); // Trigg
 myType.Throw().WhenNull("Type cannot be null."); // Triggers when this type is null.
 ```
 
-### Collection Validator
+### Collection Validators
 Collection validators are available for collection types which implements `ICollection<T>` interface. Check-out the following `Person` class implementation and how collection validators are applied on a list of `Person` objects.
 ```C#
 public class Person : IEquatable<Person> {
@@ -278,7 +278,7 @@ peopleGroup.Throw().WhenNull("Group cannot be null."); // Triggers when this typ
 
 > **Note** &nbsp; The collection object of type `T` must implement `IEquatable<T>` interface in order to allow `WhenContain` and `WhenNotContain` validators to perform necessary lookups within the list.
 
-### Custom Type Validator
+### Custom Type Validators
 Any construct of type `class` will have custom generic type validators. Consider the `Person` class described in [Collection Validator](#collection-validator) section and how generic type validators are applied on `Person person` object.
 ```C#
 person.Throw().When(() => person.Age % 10 > 5, "Age over 5 decades are not allowed."); // Triggers when meet the custom condition.
