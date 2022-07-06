@@ -34,6 +34,30 @@ age.Throw()
 
 #### _`Throw` can easily chain multiple validations into a single in-line statement_
 
+---
+## Table of Contents
++ [Prerequisites](#prerequisites)
++ [Quick Demo](#quick-demo)
++ [Implementation Overview](#implementation-overview)
+  + [`Thrower` Extensions](#thrower-extensions)
+  + [`Runner` Extensions](#runner-extensions)
++ [Validators](#validators)
+  + [Validator Enums](#validator-enums)
+    + [`Boundary` Enum](#boundary-enum)
+  + [Supported Constructs](#supported-constructs)
+    + [Numeric constructs](#numeric-constructs)
+    + [Non-Numeric constructs](#non-numeric-constructs)
+  + [Numeric Validators](#numeric-validators)
+  + [String Validators](#string-validators)
+  + [Boolean Validators](#boolean-validators)
+  + [DateTime Validators](#datetime-validators)
+  + [Enum Validators](#enum-validators)
+  + [Type Validators](#type-validators)
+  + [Collection Validators](#collection-validators)
+  + [Custom Type Validators](#custom-type-validators)
+
+---
+
 ## Implementation Overview
 `Throw` provides these additional validatable functions on different types as _Extension methods_. There are two main constructs within `Throw` library which extends other types. They are...
 * `Thrower`  
@@ -52,6 +76,7 @@ void TerminateRequest() => Console.WriteLine("Bad Request by invalid age!");
 ```
 
 Both of these are accessible in any context by the namespace reference of `using ThrowValidator.Extensions;` at the top-level or in global-usings. These enable the extensions on following constructs.
+### Supported Constructs
 #### Numeric constructs
 * `sbyte`, `sbyte?`
 * `byte`, `byte?`
