@@ -51,7 +51,7 @@ age.Run(TerminateRequest).WhenNull().WhenZero().WhenNegative();
 void TerminateRequest() => Console.WriteLine("Bad Request by invalid age!");
 ```
 
-Both of these are accessible in any context by the namespace reference of `using Throw.Extensions;` at the top-level or in global-usings. These enable the extensions on following constructs.
+Both of these are accessible in any context by the namespace reference of `using ThrowValidator.Extensions;` at the top-level or in global-usings. These enable the extensions on following constructs.
 #### Numeric constructs
 * `sbyte`, `sbyte?`
 * `byte`, `byte?`
