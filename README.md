@@ -72,7 +72,7 @@ Both of these are accessible in any context by the namespace reference of `using
 * `Enum`
 * `Type`
 * `ICollection<T>`
-* `T` as any generic type
+* `T` as any generic custom type
 
 > **Warning** The extensions on generic type `T` is available for any construct where the type is from `class`.
 
@@ -211,13 +211,13 @@ isConnected.Throw().WhenTrue("Application is connected."); // Triggers when this
 ### DateTime Validators
 ```C#
 birthDay.Throw().When(() => age < 18, "Users below 18yrs are not allowed."); // Triggers when meet the custom condition.
-birthDay.Throw().WhenEqualTo(DateTime.Now, "New borns not allowed."); // Triggers this date-time value is equal to the given date-time.
+birthDay.Throw().WhenEqualTo(DateTime.Now, "New borns not allowed."); // Triggers when this date-time value is equal to the given date-time.
 birthDay.Throw().WhenGreaterThan(new DateTime(2000, 1, 1), "You are too young."); // Triggers this date-time value is greater than the given date-time.
 birthDay.Throw().WhenGreaterThanOrEqualTo(new DateTime(2000, 1, 1), "You are too young."); // Triggers this date-time value is greater than or equal the given date-time.
 birthDay.Throw().WhenInRange(new DateTime(1970, 1, 1), new DateTime(1980, 12, 31), Boundary.Inclusive, "Birth year between 1970 and 1980 is not allowed"); // Triggers when this date-time value is within given left and right date range including the boundaries.
-birthDay.Throw().WhenLessThan(new DateTime(1950, 1, 1), "You are too old."); // Triggers this date-time value is less than the given date-time.
-birthDay.Throw().WhenLessThanOrEqualTo(new DateTime(1950, 1, 1), "You are too old."); // Triggers this date-time value is greater less or equal the given date-time.
-birthDay.Throw().WhenNotEqualTo(DateTime.Now, "New borns are only allowed."); // Triggers this date-time value is not equal to the given date-time.
+birthDay.Throw().WhenLessThan(new DateTime(1950, 1, 1), "You are too old."); // Triggers when this date-time value is less than the given date-time.
+birthDay.Throw().WhenLessThanOrEqualTo(new DateTime(1950, 1, 1), "You are too old."); // Triggers when this date-time value is greater less or equal the given date-time.
+birthDay.Throw().WhenNotEqualTo(DateTime.Now, "New borns are only allowed."); // Triggers when this date-time value is not equal to the given date-time.
 birthDay.Throw().WhenNull("Birthday cannot be null."); // Triggers when this date-time value is null.
 birthDay.Throw().WhenOutOfRange(new DateTime(1970, 1, 1), new DateTime(1980, 12, 31), Boundary.Exclusive, "Birth year outside of 1970 and 1980 is not allowed"); // Triggers when this date-time value is outside of given left and right date range excluding the boundaries.
 ```
@@ -228,6 +228,63 @@ birthDay.Throw().WhenOutOfRange(new DateTime(1970, 1, 1), new DateTime(1980, 12,
 ```C#
 boundaryEnum.Throw().When(() => boundaryEnum == Boundary.Inclusive, "Invalid enum value."); // Triggers when meet the custom condition.
 boundaryEnum.Throw().WhenEqualTo(Boundary.LeftOnly, "Boundary cannot apply LeftOnly."); // Triggers when this enum value is equalts to the given enum value
-boundaryEnum.Throw().WhenNull("Boundary value cannot be null.");
+boundaryEnum.Throw().WhenNull("Boundary value cannot be null."); // Triggers when this enum value is null.
 boundaryEnum.Throw().WhenOutOfRange(-5, "-5 index is not defined in Boundary."); // Triggers when the given enum index is not defined in this enum.
 ```
+
+### Type Validators
+```C#
+myType.Throw().When(() => myType == otherType.GetType(), "Type cannot be another."); // Triggers when meet the custom condition.
+myType.Throw().WhenEqualTo(typeof(int), "Type cannot be an integer."); // Triggers when this type is equal to the given type.
+myType.Throw().WhenNotEqualTo(typeof(string), "Type is not a string."); // Triggers when this type is not equal to the given type.
+myType.Throw().WhenNull("Type cannot be null."); // Triggers when this type is null.
+```
+
+### Collection Validator
+Collection validators are available for collection types which implements `ICollection<T>` interface. Check-out the following `Person` class implementation and how collection validators are applied on a list of `Person` objects.
+```C#
+public class Person : IEquatable<Person> {
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public int Age { get; set; }
+    public bool IsMarried { get; set; }
+
+    public bool Equals(Person other)
+    {
+      if (other is null)
+        return false;
+
+      return other.Name.Equals(Name) && other.Address.Equals(Address) && 
+        other.Age == Age && other.IsMarried == IsMarried;
+    }
+}
+```
+Consider collection validators on `ICollection<Person> peopleGroup` list.
+```C#
+peopleGroup.Throw().When(() => myAge > 50, "I should not older than 50 for this group."); // Triggers when meet the custom condition.
+peopleGroup.Throw().WhenAny(p => p.Age > 50 && !p.IsMarried, "Unmarried people over 50 are not allowed."); // Triggers when this collection has any element which satisfies the given predicate.
+peopleGroup.Throw().WhenContain(personSachi, "Sachi cannot be in this group."); // Triggers when this collection contains the given element.
+peopleGroup.Throw().WhenCountEqualTo(10, "Group cannot have 10 members."); // Triggers when this collection has exact number of elements specified.
+peopleGroup.Throw().WhenCountGreaterThan(10, "Group cannot have more than 10 members."); // Triggers when this collection count is greater than the specified length.
+peopleGroup.Throw().WhenCountGreaterThanOrEqualTo(10, "Group cannot have 10 or more members."); // Triggers when this collection count is greater or equal to the specified length.
+peopleGroup.Throw().WhenCountLessThan(10, "Group must have atleast 10 members."); // Triggers when this collection count is less than the specified length.
+peopleGroup.Throw().WhenCountLessThanOrEqualTo(10, "Group members cannot be 10 or below."); // Triggers when this collection count is less or equal to the specified length.
+peopleGroup.Throw().WhenCountNotEqualTo(10, "Group does not have 10 members."); // Triggers when this collection has no exact number of elements specified.
+peopleGroup.Throw().WhenEmpty("Group does not have any members."); // Triggers when this collection has no elements.
+peopleGroup.Throw().WhenNotContain(personSachi, "Sachi is not in this group."); // Triggers when this collection does not contains the given element.
+peopleGroup.Throw().WhenNotEmpty("Group must not have any members."); // Triggers when this collection has at least one element. (not empty)
+peopleGroup.Throw().WhenNull("Group cannot be null."); // Triggers when this type is null.
+```
+
+> **Note** &nbsp; The collection object of type `T` must implement `IEquatable<T>` interface in order to allow `WhenContain` and `WhenNotContain` validators to perform necessary lookups within the list.
+
+### Custom Type Validator
+Any construct of type `class` will have custom generic type validators. Consider the `Person` class described in [Collection Validator](#collection-validator) section and how generic type validators are applied on `Person person` object.
+```C#
+person.Throw().When(() => person.Age % 10 > 5, "Age over 5 decades are not allowed."); // Triggers when meet the custom condition.
+person.Throw().When(p => !p.IsMarried && p.Age > 35, "Come-on man... you still haven't married."); // Triggers when meet the condition on this type.
+person.Throw().WhenNot(p => p.Age > 12 && p.Age < 20, "This is for teenagers only."); // Triggers when does not meet the condition on this type.
+person.Throw().WhenNull("Person cannot be null."); // Triggers when this type is null.
+```
+
+> **Warning** &nbsp; Custom type validators are available for any `class` type constructs. The other validators implemented in `Throw` may not visible on an object if its type is not same as the validator is defined for.
