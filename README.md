@@ -1,5 +1,5 @@
 # Throw
-`Throw` is a unified conditional validator designed for .NET built-in structures and types. `Throw` also simplifies multi-level guard conditions such as `if-else` and `switch` statements into single-line validator. Interneally, `Throw` extends the behaviors of built-in types when its namespace is referred within current coding context.
+`Throw` is a unified conditional validator designed for .NET built-in structures and types. `Throw` also simplifies multi-level guard conditions such as `if-else` and `switch` statements into single-line validator. Internally, `Throw` extends the behaviors of built-in types when its namespace is referred within current coding context.
 
 ## Prerequisites
 Currently, Throw is available for local installation only. Throw requires [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) (v5.#.#) or [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) (v6.#.#).
@@ -149,6 +149,8 @@ void TerminateRequest() => Console.WriteLine("Bad Request due to invalid value!"
 // Run the parameterless function "TerminateRequest" when any validation is failed
 number.Run(TerminateRequest).WhenNegative().WhenZero();
 ```
+
+> **Note** &nbsp; `Runner` also throws the underlying exception after executing the provided action method.
 
 ## Validators
 `Throw` provides numerous useful validators based on the selected .NET construct type (`struct` or `class`). The available [Numeric](#numeric-constructs) and [Non-Numeric](#non-numeric-constructs) constructs are listed above. All of these validators can be accessed by both `Thrower` and `Runner` extensions as well.
@@ -312,4 +314,4 @@ person.Throw().WhenNot(p => p.Age > 12 && p.Age < 20, "This is for teenagers onl
 person.Throw().WhenNull("Person cannot be null."); // Triggers when this type is null.
 ```
 
-> **Warning** &nbsp; Custom type validators are available for any `class` type constructs. The other validators implemented in `Throw` may not visible on an object if its type is not same as the validator is defined for.
+> **Warning** &nbsp; Custom type validators are available for any `class` type constructs. The other validators implemented in `Throw` may not be visible on an object if its type is not same as the validator is defined for.
