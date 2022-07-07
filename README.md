@@ -27,7 +27,7 @@ age.Throw()
   .WhenNull()
   .WhenZero("Are you kidding?")
   .WhenNegative("This is unreal!")
-  .WhenInRange(13, 19, "Teenagers not allowed!");
+  .WhenInRange(13, 19, Boundary.Inclusive, "Teenagers not allowed!");
 ```
 #### _In other words, `Throw` can translate imperative flow of validations into a declarative statement_
 > **Note** &nbsp; There are more validations which can be done by `Throw` with other types as well...
@@ -306,7 +306,7 @@ peopleGroup.Throw().WhenNull("Group cannot be null."); // Triggers when this typ
 ### Custom Type Validators
 Any construct of type `class` will have custom generic type validators. Consider the `Person` class described in [Collection Validator](#collection-validator) section and how generic type validators are applied on `Person person` object.
 ```C#
-person.Throw().When(() => person.Age % 10 > 5, "Age over 5 decades are not allowed."); // Triggers when meet the custom condition.
+person.Throw().When(() => person.Age / 10 > 5, "Age over 5 decades are not allowed."); // Triggers when meet the custom condition.
 person.Throw().When(p => !p.IsMarried && p.Age > 35, "Come-on man... you still haven't married."); // Triggers when meet the condition on this type.
 person.Throw().WhenNot(p => p.Age > 12 && p.Age < 20, "This is for teenagers only."); // Triggers when does not meet the condition on this type.
 person.Throw().WhenNull("Person cannot be null."); // Triggers when this type is null.
