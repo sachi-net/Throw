@@ -278,11 +278,11 @@ public class Person : IEquatable<Person> {
 
     public bool Equals(Person other)
     {
-      if (other is null)
-        return false;
+        if (other is null)
+          return false;
 
-      return other.Name.Equals(Name) && other.Address.Equals(Address) && 
-        other.Age == Age && other.IsMarried == IsMarried;
+        return other.Name.Equals(Name) && other.Address.Equals(Address) && 
+          other.Age == Age && other.IsMarried == IsMarried;
     }
 }
 ```
