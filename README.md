@@ -29,6 +29,9 @@ age.Throw()
   .WhenNegative("This is unreal!")
   .WhenInRange(13, 19, Boundary.Inclusive, "Teenagers not allowed!");
 ```
+
+![Imgur](https://i.imgur.com/WRguydA.png?1)
+
 #### _In other words, `Throw` can translate imperative flow of validations into a declarative statement_
 > **Note** &nbsp; There are more validations which can be done by `Throw` with other types as well...
 
